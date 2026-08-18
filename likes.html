@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velori - Likes You</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <style>
+    /* Likes page specific styles */
+    .likes-page-header {
+        padding: 0 0 20px;
+    }
+    .likes-page-header h1 {
+        font-family: var(--font-display);
+        font-size: 42px;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .likes-page-header .badge {
+        background-color: var(--primary-color);
+        color: white;
+        font-size: 18px;
+        font-family: var(--font-body);
+        font-weight: 600;
+        width: 32px;
+        height: 32px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+    }
+    .likes-page-header p {
+        color: var(--dash-muted);
+        margin: 8px 0 0;
+        font-size: 16px;
+    }
+    .likes-page-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px 12px;
+        margin: 0 0 24px;
+    }
+    @media (max-width: 991px) {
+        .likes-page-header {
+            padding: 10px 20px 20px;
+        }
+        .likes-page-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 0 20px 24px;
+        }
+        .upgrade-likes-banner {
+            margin: 20px !important;
+        }
+    }
+    .like-blur-card {
+        position: relative;
+        border-radius: 12px;
+        overflow: hidden;
+        aspect-ratio: 3 / 4;
+        background-color: #ddd;
+    }
+    .like-blur-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(10px);
+        transform: scale(1.1);
+    }
+    .like-blur-info {
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        right: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+    }
+    .like-heart-icon {
+        width: 28px;
+        height: 28px;
+        background-color: rgba(239, 41, 95, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        font-size: 14px;
+    }
+    .upgrade-likes-banner {
+        background: linear-gradient(180deg, rgba(255, 230, 238, 1) 0%, rgba(253, 240, 245, 1) 100%);
+        border-radius: 16px;
+        padding: 30px 24px;
+        text-align: center;
+        margin: 0;
+    }
+    .upgrade-likes-banner .icon {
+        color: var(--primary-color);
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    .upgrade-likes-banner h2 {
+        font-family: var(--font-display);
+        font-size: 28px;
+        margin-bottom: 10px;
+        color: var(--dash-ink);
+        font-weight: 400;
+    }
+    .upgrade-likes-banner p {
+        color: var(--dash-muted);
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    .btn-upgrade-likes {
+        background-color: var(--primary-color);
+        color: white;
+        border: none;
+        border-radius: 24px;
+        padding: 14px 24px;
+        font-size: 16px;
+        font-weight: 500;
+        width: 100%;
+        max-width: 280px;
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body class="dash-body messages-body">
+    <main class="dashboard-shell messages-shell">
+        <aside class="dash-sidebar" aria-label="Dashboard navigation">
+            <a class="dash-brand" href="index.html">
+                <img src="assets/images/icons/velori-logo.png" alt="Velori">
+            </a>
+            <div class="dash-drawer-user">
+                <a class="dash-drawer-profile" href="profile.html">
+                    <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex John">
+                    <span><strong>Alex John</strong><small>View Profile <i class="bi bi-arrow-up-right"></i></small></span>
+                </a>
+                <button class="dash-drawer-close" type="button" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <nav class="dash-drawer-nav" aria-label="Mobile dashboard navigation">
+                <span class="dash-drawer-eyebrow">General</span>
+                <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+                <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+                <a href="notifications.html"><i class="bi bi-bell"></i> Notifications <b>3</b></a>
+                <a class="dash-drawer-upgrade" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-crown"></i> Upgrade to premium</a>
+                <span class="dash-drawer-eyebrow">Support</span>
+                <a href="help.html"><i class="bi bi-question-circle"></i> Help & Support</a>
+                <a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a>
+                <a class="dash-drawer-logout" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            </nav>
+            <nav class="dash-nav">
+                <span class="dash-nav__eyebrow">Main Menu</span>
+                <a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+                <a href="dashboard.html"><i class="bi bi-search"></i> Discover</a>
+                <a href="likes.html"><i class="bi bi-heart"></i> Likes</a>
+                <a href="messages.html"><i class="bi bi-people"></i> Matches</a>
+                <a href="messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
+                <span class="dash-nav__eyebrow">General</span>
+                <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+                <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+            </nav>
+            <div class="premium-box">
+                <div class="premium-box__icon"><img src="assets/images/modals/modal-credits-coin.png" alt=""></div>
+                <h3>Go Premium!</h3>
+                <p>Unlock all features and find your perfect match faster.</p>
+                <a href="#upgrade-modal" data-open-modal="credits">Upgrade Now <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </aside>
+        <button class="dash-sidebar-backdrop" type="button" aria-label="Close menu"></button>
+
+        <section class="dash-main likes-main">            <header class="dash-mobile-head messages-mobile-head">
+                <button class="dash-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+                <a class="dash-mobile-brand" href="index.html"><img src="assets/images/icons/velori-logo.png" alt="Velori"></a>
+                <div class="dash-mobile-actions">
+                    <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade</a>
+                    <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+                </div>
+            </header>
+            
+            <div class="likes-page-header">
+                <h1>Likes You <span class="badge">3</span></h1>
+                <p>See who's already interested in you.</p>
+            </div>
+
+            <div class="likes-page-grid">
+                <div class="like-blur-card">
+                    <img src="assets/images/profiles/profile-1.jpg" alt="Blurred Profile">
+                    <div class="like-blur-info">
+                        <span>27</span>
+                        <div class="like-heart-icon"><i class="bi bi-heart-fill"></i></div>
+                    </div>
+                </div>
+                <div class="like-blur-card">
+                    <img src="assets/images/profiles/profile-2.jpg" alt="Blurred Profile">
+                    <div class="like-blur-info">
+                        <span>30</span>
+                        <div class="like-heart-icon"><i class="bi bi-heart-fill"></i></div>
+                    </div>
+                </div>
+                <div class="like-blur-card">
+                    <img src="assets/images/profiles/profile-3.jpg" alt="Blurred Profile">
+                    <div class="like-blur-info">
+                        <span>25</span>
+                        <div class="like-heart-icon"><i class="bi bi-heart-fill"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="upgrade-likes-banner">
+                <div class="icon"><i class="bi bi-gem"></i></div>
+                <h2>Reveal who likes you</h2>
+                <p>Upgrade to see their profiles and start matching.</p>
+                <button class="btn-upgrade-likes" type="button">See Who Likes You</button>
+            </div>
+
+        </section>
+
+        <nav class="mobile-bottom-nav" aria-label="Mobile dashboard navigation">
+            <a href="dashboard.html"><i class="bi bi-grid"></i><span>Dashboard</span></a>
+            <a href="dashboard.html"><i class="bi bi-search"></i><span>Discover</span></a>
+            <a class="active" href="likes.html"><i class="bi bi-heart"></i><span>Likes</span></a>
+            <a href="messages.html"><i class="bi bi-chat-dots"></i><span>Messages</span></a>
+            <a href="profile.html"><i class="bi bi-person"></i><span>Profile</span></a>
+        </nav>
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

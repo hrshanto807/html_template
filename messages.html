@@ -38,7 +38,7 @@
                 <span class="dash-nav__eyebrow">Main Menu</span>
                 <a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
                 <a href="dashboard.html"><i class="bi bi-search"></i> Discover</a>
-                <a href="notifications.html"><i class="bi bi-heart"></i> Likes</a>
+                <a href="likes.html"><i class="bi bi-heart"></i> Likes</a>
                 <a href="messages.html"><i class="bi bi-people"></i> Matches</a>
                 <a class="active" href="messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
                 <span class="dash-nav__eyebrow">General</span>
@@ -99,21 +99,21 @@
                         <h2>New Matches</h2>
                         <div class="mobile-match-strip">
                             <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-2.jpg" alt="Emma"></span><strong>Emma, 27</strong></a>
-                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-9.jpg" alt="Liam"></span><strong>Liam, 30 <i class="bi bi-patch-check-fill"></i></strong></a>
-                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-4.jpg" alt="Sophia"></span><strong>Sophia, 25 <i class="bi bi-patch-check-fill"></i></strong></a>
-                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-10.jpg" alt="Noah"></span><strong>Noah, 32</strong></a>
+                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-9.jpg" alt="Liam"></span><strong>Liam, 30 <i class="bi bi-patch-check-fill text-primary"></i></strong></a>
+                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-4.jpg" alt="Sophia"></span><strong>Sophia, 25 <i class="bi bi-patch-check-fill text-primary"></i></strong></a>
+                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-10.jpg" alt="Noah"></span><strong>Noah, 28 <i class="bi bi-patch-check-fill text-primary"></i></strong></a>
                         </div>
                     </section>
                     <h2 class="messages-mobile-title">Messages</h2>
 
                     <div class="message-thread-list">
                         <a class="message-thread active" href="#chat"><span class="message-avatar"><img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella"></span><span class="message-thread-copy"><strong>Isabella</strong><small>Thank you very much. I'm...</small></span><time>2h</time></a>
-                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-5.jpg" alt="Ethan"></span><span class="message-thread-copy"><strong>Ethan</strong><small>Hey.</small></span><time>1d</time></a>
-                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-6.jpg" alt="Jakob Saris"></span><span class="message-thread-copy"><strong>Jakob Saris</strong><small>Hi there!</small></span><time>3h</time></a>
-                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-5.jpg" alt="Ethan"></span><span class="message-thread-copy"><strong>Ethan</strong><small>Hey.</small></span><time>1d</time></a>
-                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-12.jpg" alt="Ava"></span><span class="message-thread-copy"><strong>Ava</strong><small>Hi there!</small></span><time>3h</time></a>
-                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-7.jpg" alt="Jeremy Zucker"></span><span class="message-thread-copy"><strong>Jeremy Zucker</strong><small>Hi there!</small></span><time>3h</time></a>
-                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-12.jpg" alt="Ava"></span><span class="message-thread-copy"><strong>Ava</strong><small>Hi there!</small></span><time>3h</time></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-12.jpg" alt="Ava"></span><span class="message-thread-copy"><strong>Ava</strong><small class="msg-status-new"><span class="msg-status-icon"></span> New Photo</small></span><time>2m</time><button class="btn-open-msg">Open</button></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-5.jpg" alt="Ethan"></span><span class="message-thread-copy"><strong>Ethan</strong><small>Hey!</small></span><time>1d</time></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-6.jpg" alt="Jacob Saris"></span><span class="message-thread-copy"><strong>Jacob Saris</strong><small class="msg-status-new"><span class="msg-status-icon"></span> New Video</small></span><time>3h</time><button class="btn-open-msg">Open</button></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-10.jpg" alt="Noah"></span><span class="message-thread-copy"><strong>Noah</strong><small>That sounds great!</small></span><time>2d</time></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-11.jpg" alt="Mia"></span><span class="message-thread-copy"><strong>Mia</strong><small class="msg-status-new"><span class="msg-status-icon"></span> New Photo</small></span><time>3m</time><button class="btn-open-msg">Open</button></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-7.jpg" alt="Daniel"></span><span class="message-thread-copy"><strong>Daniel</strong><small>Let's plan for this weekend.</small></span><time>3d</time></a>
                     </div>
                 </section>
 
@@ -194,9 +194,9 @@
         <nav class="mobile-bottom-nav" aria-label="Mobile dashboard navigation">
             <a href="dashboard.html"><i class="bi bi-grid"></i><span>Dashboard</span></a>
             <a href="dashboard.html"><i class="bi bi-search"></i><span>Discover</span></a>
-            <a href="notifications.html"><i class="bi bi-heart"></i><span>Likes</span></a>
-            <a href="messages.html"><i class="bi bi-people"></i><span>Matches</span></a>
+            <a href="likes.html"><i class="bi bi-heart"></i><span>Likes</span></a>
             <a class="active" href="messages.html"><i class="bi bi-chat-dots"></i><span>Messages</span></a>
+            <a href="profile.html"><i class="bi bi-person"></i><span>Profile</span></a>
         </nav>
     </main>
 
@@ -406,3 +406,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+

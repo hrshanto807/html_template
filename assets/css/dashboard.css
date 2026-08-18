@@ -5952,4 +5952,37 @@ body.is-popup-scroll-locked {
     .dash-sidebar-backdrop {
         transition: none !important;
     }
+}/* Custom updates for messages and likes page */
+.btn-open-msg {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    font-family: var(--font-body);
+}
+.msg-status-new {
+    color: var(--primary-color) !important;
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+    font-weight: 500;
+}
+.msg-status-icon {
+    width: 12px;
+    height: 12px;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    display: inline-block;
+}
+@media (max-width: 991px) {
+    .messages-search {
+        border-radius: 30px !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
+        min-height: 50px !important;
+        margin: 10px 20px 20px !important;
+    }
 }
