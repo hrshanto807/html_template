@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velori - Emma Profile</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="dash-body profile-body someone-profile-body">
+    <main class="dashboard-shell">
+        <aside class="dash-sidebar" aria-label="Dashboard navigation">
+            <a class="dash-brand" href="index.html">
+                <img src="assets/images/icons/velori-logo.png" alt="Velori">
+            </a>
+            <div class="dash-drawer-user">
+                <a class="dash-drawer-profile" href="profile.html">
+                    <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex John">
+                    <span>
+                        <strong>Alex John</strong>
+                        <small>View Profile <i class="bi bi-arrow-up-right"></i></small>
+                    </span>
+                </a>
+                <button class="dash-drawer-close" type="button" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <nav class="dash-drawer-nav" aria-label="Mobile dashboard navigation">
+                <span class="dash-drawer-eyebrow">General</span>
+                <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+                <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+                <a href="notifications.html"><i class="bi bi-bell"></i> Notifications <b>3</b></a>
+                <a class="dash-drawer-upgrade" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-crown"></i> Upgrade to premium</a>
+                <span class="dash-drawer-eyebrow">Support</span>
+                <a href="help.html"><i class="bi bi-question-circle"></i> Help & Support</a>
+                <a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a>
+                <a class="dash-drawer-logout" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            </nav>
+            <nav class="dash-nav">
+                <span class="dash-nav__eyebrow">Main Menu</span>
+                <a class="active" href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+                <a href="dashboard.html"><i class="bi bi-search"></i> Discover</a>
+                <a href="notifications.html"><i class="bi bi-heart"></i> Likes</a>
+                <a href="messages.html"><i class="bi bi-people"></i> Matches</a>
+                <a href="messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
+                <span class="dash-nav__eyebrow">General</span>
+                <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+                <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+            </nav>
+            <div class="premium-box">
+                <div class="premium-box__icon"><img src="assets/images/modals/modal-credits-coin.png" alt=""></div>
+                <h3>Go Premium!</h3>
+                <p>Unlock all features and find your perfect match faster.</p>
+                <a href="#upgrade-modal" data-open-modal="credits">Upgrade Now <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </aside>
+        <button class="dash-sidebar-backdrop" type="button" aria-label="Close menu"></button>
+
+        <section class="dash-main">
+            <header class="dash-mobile-head">
+                <button class="dash-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+                <a class="dash-mobile-brand" href="index.html">
+                    <img src="assets/images/icons/velori-logo.png" alt="Velori">
+                </a>
+                <div class="dash-mobile-actions">
+                    <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade</a>
+                    <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+                </div>
+            </header>
+
+            <header class="dash-topbar">
+                <div>
+                    <h1>Good Evening, <span>Alex</span></h1>
+                    <p>Ready to make meaningful connection?</p>
+                </div>
+                <div class="dash-actions">
+                    <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade Account</a>
+                    <a class="circle-action" href="messages.html" aria-label="Messages"><i class="bi bi-chat-dots"></i></a>
+                    <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+                    <button class="dash-user" type="button">
+                        <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex">
+                        <span>Alex John</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="dash-grid profile-page-grid someone-profile-grid">
+                <section class="my-profile-card someone-profile-card">
+                    <div class="my-profile-cover" aria-hidden="true"></div>
+                    <div class="my-profile-summary">
+                        <div class="my-profile-avatar someone-profile-avatar">
+                            <img src="assets/images/profiles/profile-9.jpg" alt="Emma">
+                        </div>
+                        <div class="my-profile-copy">
+                            <div class="my-profile-heading">
+                                <div>
+                                    <h2>Emma, 27 <i class="bi bi-patch-check-fill"></i></h2>
+                                    <p><i class="bi bi-geo-alt"></i> 3 miles away</p>
+                                </div>
+                            </div>
+                            <div class="profile-chip-row">
+                                <span>Food</span>
+                                <span>Art</span>
+                                <span>+3</span>
+                            </div>
+                            <p class="my-profile-bio">So long as you have food in your mouth, you have solved all questions for the time being.</p>
+                        </div>
+                    </div>
+
+                    <div class="my-profile-tabs" role="tablist" aria-label="Profile sections">
+                        <button class="active" type="button" role="tab" aria-selected="true" data-profile-tab="photos">Photos</button>
+                        <button type="button" role="tab" aria-selected="false" data-profile-tab="about">About</button>
+                    </div>
+
+                    <div class="someone-profile-photos profile-tab-panel is-active" data-profile-panel="photos">
+                        <div class="someone-photo-track" data-someone-photo-track>
+                            <img src="assets/images/profiles/profile-7.jpg" alt="Emma photo">
+                            <img src="assets/images/profiles/profile-6.jpg" alt="Emma photo">
+                            <img src="assets/images/profiles/profile-4.jpg" alt="Emma photo">
+                            <img src="assets/images/profiles/profile-5.jpg" alt="Emma photo">
+                            <img src="assets/images/profiles/profile-10.jpg" alt="Emma photo">
+                            <img src="assets/images/profiles/profile-11.jpg" alt="Emma photo">
+                            <img src="assets/images/profiles/profile-8.jpg" alt="Emma photo">
+                            <img src="assets/images/profiles/profile-12.jpg" alt="Emma photo">
+                        </div>
+                        <button class="someone-photo-next" type="button" aria-label="Next photo" data-someone-photo-next><i class="bi bi-chevron-right"></i></button>
+                    </div>
+
+                    <div class="my-profile-about someone-profile-about profile-tab-panel" data-profile-panel="about">
+                        <dl>
+                            <div><dt>Live in:</dt><dd>Austin, Texas</dd></div>
+                            <div><dt>Hometown:</dt><dd>Denver, Colorado</dd></div>
+                            <div><dt>Relationship:</dt><dd>In a relationship</dd></div>
+                            <div><dt>Work as:</dt><dd>Graphic Designer</dd></div>
+                            <div><dt>Education:</dt><dd>Bachelor of Visual Arts</dd></div>
+                            <div><dt>Languages:</dt><dd>English, Spanish</dd></div>
+                            <div><dt>Drink:</dt><dd>Occasionally</dd></div>
+                            <div><dt>Family plans:</dt><dd>Planning for kids</dd></div>
+                            <div><dt>Smoke:</dt><dd>Rarely</dd></div>
+                            <div><dt>Marijuana:</dt><dd>Yes</dd></div>
+                        </dl>
+                        <div class="my-profile-interests">
+                            <h3>Personal Interests:</h3>
+                            <div class="profile-chip-row">
+                                <span>Hiking</span>
+                                <span>Gaming</span>
+                                <span>Cooking</span>
+                                <span>Sports</span>
+                                <span>Technology</span>
+                                <span>Chess</span>
+                                <span>Comics</span>
+                                <span>Music</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="dash-sidecards someone-sidecards">
+                    <section class="mini-card likes-card">
+                        <div class="mini-card__title">
+                            <h3>Who liked you</h3>
+                            <span>12 new likes</span>
+                        </div>
+                        <div class="likes-slider" data-likes-slider>
+                            <div class="likes-slider__track">
+                                <img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella">
+                                <img src="assets/images/profiles/profile-11.jpg" alt="Sophia">
+                                <img src="assets/images/avatars/avatar-ethan.jpg" alt="Ethan">
+                                <img src="assets/images/profiles/profile-12.jpg" alt="Ava">
+                            </div>
+                            <button class="likes-slider__next" type="button" aria-label="Next likes"><i class="bi bi-chevron-right"></i></button>
+                        </div>
+                    </section>
+
+                    <section class="mini-card matches-card">
+                        <div class="mini-card__title">
+                            <h3>Your Matches</h3>
+                            <a href="messages.html">See All Matches <i class="bi bi-arrow-up-right"></i></a>
+                        </div>
+                        <div class="match-row">
+                            <span class="match-avatar"><img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella"></span>
+                            <p><b>Isabella</b><span>New message</span></p>
+                            <time>2h</time>
+                        </div>
+                        <div class="match-row">
+                            <span class="match-avatar"><img src="assets/images/avatars/avatar-ethan.jpg" alt="Ethan"></span>
+                            <p><b>Ethan</b><span>Hey.</span></p>
+                            <time>1d</time>
+                        </div>
+                        <div class="match-row">
+                            <span class="match-avatar"><img src="assets/images/profiles/profile-12.jpg" alt="Ava"></span>
+                            <p><b>Ava</b><span>Hi there!</span></p>
+                            <time>3h</time>
+                        </div>
+                    </section>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <nav class="mobile-bottom-nav" aria-label="Mobile dashboard navigation">
+        <a class="active" href="dashboard.html"><i class="bi bi-grid"></i><span>Dashboard</span></a>
+        <a href="dashboard.html"><i class="bi bi-search"></i><span>Discover</span></a>
+        <a href="notifications.html"><i class="bi bi-heart"></i><span>Likes</span></a>
+        <a href="messages.html"><i class="bi bi-people"></i><span>Matches</span></a>
+        <a href="messages.html"><i class="bi bi-chat-dots"></i><span>Messages</span></a>
+    </nav>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            var body = document.body;
+            var menuButton = document.querySelector('.dash-menu-btn');
+            var closeButtons = document.querySelectorAll('.dash-drawer-close, .dash-sidebar-backdrop');
+            var drawerLinks = document.querySelectorAll('.dash-drawer-nav a');
+
+            function closeDrawer() {
+                body.classList.remove('is-sidebar-open');
+                if (menuButton) {
+                    menuButton.setAttribute('aria-expanded', 'false');
+                }
+            }
+
+            if (menuButton) {
+                menuButton.addEventListener('click', function () {
+                    var isOpen = body.classList.toggle('is-sidebar-open');
+                    menuButton.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+                });
+            }
+
+            closeButtons.forEach(function (button) {
+                button.addEventListener('click', closeDrawer);
+            });
+
+            drawerLinks.forEach(function (link) {
+                link.addEventListener('click', closeDrawer);
+            });
+
+            document.querySelectorAll('[data-profile-tab]').forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    var target = tab.getAttribute('data-profile-tab');
+                    document.querySelectorAll('[data-profile-tab]').forEach(function (item) {
+                        var isActive = item === tab;
+                        item.classList.toggle('active', isActive);
+                        item.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                    });
+                    document.querySelectorAll('[data-profile-panel]').forEach(function (panel) {
+                        panel.classList.toggle('is-active', panel.getAttribute('data-profile-panel') === target);
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Velori - Dashboard</title>
+   <link rel="stylesheet" href="assets/plugins/bootstrap-icons/font/bootstrap-icons.min.css">
+   <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+   <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body class="dash-body">
+   <main class="dashboard-shell">
+      <aside class="dash-sidebar" aria-label="Dashboard navigation">
+         <a class="dash-brand" href="index.html">
+            <img src="assets/images/icons/velori-logo.png" alt="Velori">
+         </a>
+
+         <div class="dash-drawer-user">
+            <a class="dash-drawer-profile" href="profile.html">
+               <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex John">
+               <span>
+                  <strong>Alex John</strong>
+                  <small>View Profile <i class="bi bi-arrow-up-right"></i></small>
+               </span>
+            </a>
+            <button class="dash-drawer-close" type="button" aria-label="Close menu">
+               <i class="bi bi-x-lg"></i>
+            </button>
+         </div>
+
+         <nav class="dash-drawer-nav" aria-label="Mobile dashboard navigation">
+            <span class="dash-drawer-eyebrow">General</span>
+            <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+            <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+            <a href="notifications.html"><i class="bi bi-bell"></i> Notifications <b>3</b></a>
+            <a class="dash-drawer-upgrade" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-crown"></i> Upgrade to premium</a>
+            <span class="dash-drawer-eyebrow">Support</span>
+            <a href="help.html"><i class="bi bi-question-circle"></i> Help & Support</a>
+            <a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a>
+            <a class="dash-drawer-logout" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+         </nav>
+
+         <nav class="dash-nav">
+            <span class="dash-nav__eyebrow">Main Menu</span>
+            <a class="active" href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+            <a href="dashboard.html"><i class="bi bi-search"></i> Discover</a>
+            <a href="notifications.html"><i class="bi bi-heart"></i> Likes</a>
+            <a href="messages.html"><i class="bi bi-people"></i> Matches</a>
+            <a href="messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
+            <span class="dash-nav__eyebrow">General</span>
+            <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+            <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+         </nav>
+
+         <div class="premium-box">
+            <div class="premium-box__icon"><img src="assets/images/modals/modal-credits-coin.png" alt=""></div>
+            <h3>Go Premium!</h3>
+            <p>Unlock all features and find your perfect match faster.</p>
+            <a href="#upgrade-modal" data-open-modal="credits">Upgrade Now <i class="bi bi-arrow-up-right"></i></a>
+         </div>
+      </aside>
+      <button class="dash-sidebar-backdrop" type="button" aria-label="Close menu"></button>
+
+      <section class="dash-main">
+         <header class="dash-mobile-head">
+            <button class="dash-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+            <a class="dash-mobile-brand" href="index.html">
+               <img src="assets/images/icons/velori-logo.png" alt="Velori">
+            </a>
+            <div class="dash-mobile-actions">
+               <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade</a>
+               <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+            </div>
+         </header>
+
+         <header class="dash-topbar">
+            <div>
+               <h1>Good Evening, <span>Alex</span></h1>
+               <p>Ready to make meaningful connection?</p>
+            </div>
+            <div class="dash-actions">
+               <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade Account</a>
+               <a class="circle-action" href="messages.html" aria-label="Messages"><i class="bi bi-chat-dots"></i></a>
+               
+               <!-- Notification Popup Trigger & Panel -->
+               <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+
+               <!-- Profile Dropdown Trigger & Menu -->
+               <button class="dash-user" type="button">
+                  <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex">
+                  <span>Alex John</span>
+               </button>
+            </div>
+         </header>
+
+         <div class="dash-grid">
+            <section class="dash-discover">
+               <div class="dash-section-title">
+                  <h2>Discover People</h2>
+                  <a href="someone-profile.html">View All <i class="bi bi-arrow-up-right"></i></a>
+               </div>
+
+               <div class="discover-grid" id="discoverGrid">
+                  <article class="profile-card" data-status="new">
+                     <img src="assets/images/profiles/profile-11.jpg" alt="Emma" class="profile-card__photo">
+                     <div class="profile-card__info">
+                        <h3><a href="someone-profile.html">Emma, 27</a> <i class="bi bi-patch-check-fill"></i></h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p>
+                        <div class="tags"><span>Travel</span><span>Music</span><span>+2</span></div>
+                     </div>
+                     <div class="profile-card__actions">
+                        <button aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+                        <button aria-label="Favorite"><i class="bi bi-star-fill"></i></button>
+                        <button aria-label="Like"><i class="bi bi-heart"></i></button>
+                     </div>
+                  </article>
+                  <article class="profile-card" data-status="online">
+                     <img src="assets/images/profiles/profile-2.jpg" alt="Sophia" class="profile-card__photo">
+                     <div class="profile-card__info">
+                        <h3><a href="someone-profile.html">Sophia, 24</a> <i class="bi bi-patch-check-fill"></i></h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p>
+                        <div class="tags"><span>Travel</span><span>Music</span><span>+2</span></div>
+                     </div>
+                     <div class="profile-card__actions">
+                        <button aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+                        <button aria-label="Favorite"><i class="bi bi-star-fill"></i></button>
+                        <button aria-label="Like"><i class="bi bi-heart"></i></button>
+                     </div>
+                  </article>
+                  <article class="profile-card" data-status="new online">
+                     <img src="assets/images/profiles/profile-3.jpg" alt="Ava" class="profile-card__photo">
+                     <div class="profile-card__info">
+                        <h3><a href="someone-profile.html">Ava, 26</a> <i class="bi bi-patch-check-fill"></i></h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p>
+                        <div class="tags"><span>Travel</span><span>Music</span><span>+2</span></div>
+                     </div>
+                     <div class="profile-card__actions">
+                        <button aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+                        <button aria-label="Favorite"><i class="bi bi-star-fill"></i></button>
+                        <button aria-label="Like"><i class="bi bi-heart"></i></button>
+                     </div>
+                  </article>
+                  <article class="profile-card">
+                     <img src="assets/images/profiles/profile-9.jpg" alt="Mia" class="profile-card__photo">
+                     <div class="profile-card__info">
+                        <h3><a href="someone-profile.html">Mia, 23</a> <i class="bi bi-patch-check-fill"></i></h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p>
+                        <div class="tags"><span>Travel</span><span>Music</span><span>+2</span></div>
+                     </div>
+                     <div class="profile-card__actions">
+                        <button aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+                        <button aria-label="Favorite"><i class="bi bi-star-fill"></i></button>
+                        <button aria-label="Like"><i class="bi bi-heart"></i></button>
+                     </div>
+                  </article>
+                  <article class="profile-card" data-status="online">
+                     <img src="assets/images/profiles/profile-10.jpg" alt="Isabella" class="profile-card__photo">
+                     <div class="profile-card__info">
+                        <h3><a href="someone-profile.html">Isabella, 25</a> <i class="bi bi-patch-check-fill"></i></h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p>
+                        <div class="tags"><span>Travel</span><span>Music</span><span>+2</span></div>
+                     </div>
+                     <div class="profile-card__actions">
+                        <button aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+                        <button aria-label="Favorite"><i class="bi bi-star-fill"></i></button>
+                        <button aria-label="Like"><i class="bi bi-heart"></i></button>
+                     </div>
+                  </article>
+                  <article class="profile-card" data-status="new">
+                     <img src="assets/images/profiles/profile-12.jpg" alt="Olivia" class="profile-card__photo">
+                     <div class="profile-card__info">
+                        <h3><a href="someone-profile.html">Olivia, 28</a> <i class="bi bi-patch-check-fill"></i></h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p>
+                        <div class="tags"><span>Travel</span><span>Music</span><span>+2</span></div>
+                     </div>
+                     <div class="profile-card__actions">
+                        <button aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+                        <button aria-label="Favorite"><i class="bi bi-star-fill"></i></button>
+                        <button aria-label="Like"><i class="bi bi-heart"></i></button>
+                     </div>
+                  </article>
+                  <article class="profile-card">
+                     <img src="assets/images/profiles/profile-8.jpg" alt="Lily" class="profile-card__photo">
+                     <div class="profile-card__info">
+                        <h3><a href="someone-profile.html">Lily, 22</a> <i class="bi bi-patch-check-fill"></i></h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p>
+                        <div class="tags"><span>Travel</span><span>Music</span><span>+2</span></div>
+                     </div>
+                     <div class="profile-card__actions">
+                        <button aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+                        <button aria-label="Favorite"><i class="bi bi-star-fill"></i></button>
+                        <button aria-label="Like"><i class="bi bi-heart"></i></button>
+                     </div>
+                  </article>
+                  <article class="profile-card" data-status="online">
+                     <img src="assets/images/profiles/profile-6.jpg" alt="Amelia" class="profile-card__photo">
+                     <div class="profile-card__info">
+                        <h3><a href="someone-profile.html">Amelia, 26</a> <i class="bi bi-patch-check-fill"></i></h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p>
+                        <div class="tags"><span>Travel</span><span>Music</span><span>+2</span></div>
+                     </div>
+                     <div class="profile-card__actions">
+                        <button aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+                        <button aria-label="Favorite"><i class="bi bi-star-fill"></i></button>
+                        <button aria-label="Like"><i class="bi bi-heart"></i></button>
+                     </div>
+                  </article>
+                  <article class="profile-card" data-status="new online">
+                     <img src="assets/images/profiles/profile-5.jpg" alt="Grace" class="profile-card__photo">
+                     <div class="profile-card__info">
+                        <h3><a href="someone-profile.html">Grace, 25</a> <i class="bi bi-patch-check-fill"></i></h3>
+                        <p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p>
+                        <div class="tags"><span>Travel</span><span>Music</span><span>+2</span></div>
+                     </div>
+                     <div class="profile-card__actions">
+                        <button aria-label="Dismiss"><i class="bi bi-x-lg"></i></button>
+                        <button aria-label="Favorite"><i class="bi bi-star-fill"></i></button>
+                        <button aria-label="Like"><i class="bi bi-heart"></i></button>
+                     </div>
+                  </article>
+               </div>
+            </section>
+
+            <aside class="dash-sidecards">
+               <section class="mini-card completeness-card">
+                  <h3>Profile Completeness</h3>
+                  <div class="completeness-content">
+                     <div class="completeness-circle">
+                        <svg viewBox="0 0 120 120" aria-hidden="true">
+                           <circle cx="60" cy="60" r="46" class="track"></circle>
+                           <circle cx="60" cy="60" r="46" class="progress"></circle>
+                        </svg>
+                        <div class="percentage">80%</div>
+                     </div>
+                     <div class="completeness-info">
+                        <h4>Almost there!</h4>
+                        <p>Complete your profile to get better matches.</p>
+                        <a href="edit-profile.html" class="complete-btn">
+                           <span><i class="bi bi-arrow-up-right"></i></span>
+                           COMPLETE PROFILE
+                        </a>
+                     </div>
+                  </div>
+               </section>
+
+               <section class="mini-card likes-card">
+                  <div class="mini-card__title">
+                     <h3>Who liked you</h3>
+                     <span>12 new likes</span>
+                  </div>
+                  <div class="likes-slider" data-likes-slider>
+                     <div class="likes-slider__track">
+                        <img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella">
+                        <img src="assets/images/profiles/profile-11.jpg" alt="Sophia">
+                        <img src="assets/images/avatars/avatar-ethan.jpg" alt="Ethan">
+                        <img src="assets/images/profiles/profile-12.jpg" alt="Ava">
+                        <img src="assets/images/profiles/profile-2.jpg" alt="Mia">
+                        <img src="assets/images/profiles/profile-5.jpg" alt="Ava">
+                        <img src="assets/images/profiles/profile-8.jpg" alt="Olivia">
+                     </div>
+                     <button class="likes-slider__next" type="button" aria-label="Next likes"><i class="bi bi-chevron-right"></i></button>
+                  </div>
+               </section>
+
+               <section class="mini-card matches-card">
+                  <div class="mini-card__title">
+                     <h3>Your Matches</h3>
+                     <a href="messages.html">See All Matches <i class="bi bi-arrow-up-right"></i></a>
+                  </div>
+                  <div class="match-row">
+                     <a class="match-avatar" href="someone-profile.html"><img src="assets/images/avatars/avatar-isabella.jpg"
+                           alt="Isabella"></a>
+                     <p><b><a href="someone-profile.html">Isabella</a></b><span>New message</span></p>
+                     <time>2h</time>
+                  </div>
+                  <div class="match-row">
+                     <a class="match-avatar" href="someone-profile.html"><img src="assets/images/avatars/avatar-ethan.jpg" alt="Ethan"></a>
+                     <p><b><a href="someone-profile.html">Ethan</a></b><span>Hey.</span></p>
+                     <time>1d</time>
+                  </div>
+                  <div class="match-row">
+                     <a class="match-avatar" href="someone-profile.html"><img src="assets/images/profiles/profile-12.jpg" alt="Ava"></a>
+                     <p><b><a href="someone-profile.html">Ava</a></b><span>Hi there!</span></p>
+                     <time>3h</time>
+                  </div>
+               </section>
+            </aside>
+         </div>
+      </section>
+
+      <nav class="mobile-bottom-nav" aria-label="Mobile dashboard navigation">
+         <a class="active" href="dashboard.html"><i class="bi bi-grid"></i><span>Dashboard</span></a>
+         <a href="dashboard.html"><i class="bi bi-search"></i><span>Discover</span></a>
+         <a href="notifications.html"><i class="bi bi-heart"></i><span>Likes</span></a>
+         <a href="messages.html"><i class="bi bi-people"></i><span>Matches</span></a>
+         <a href="messages.html"><i class="bi bi-chat-dots"></i><span>Messages</span></a>
+      </nav>
+   </main>
+   <script>
+      var dashBody = document.body;
+      var menuButton = document.querySelector('.dash-menu-btn');
+      var closeButtons = document.querySelectorAll('.dash-drawer-close, .dash-sidebar-backdrop');
+      var drawerLinks = document.querySelectorAll('.dash-drawer-nav a');
+
+      function setSidebar(open) {
+         dashBody.classList.toggle('is-sidebar-open', open);
+         if (menuButton) {
+            menuButton.setAttribute('aria-expanded', String(open));
+         }
+      }
+
+      if (menuButton) {
+         menuButton.addEventListener('click', function () {
+            setSidebar(true);
+         });
+      }
+
+      closeButtons.forEach(function (button) {
+         button.addEventListener('click', function () {
+            setSidebar(false);
+         });
+      });
+
+      drawerLinks.forEach(function (link) {
+         link.addEventListener('click', function () {
+            setSidebar(false);
+         });
+      });
+
+      document.addEventListener('keydown', function (event) {
+         if (event.key === 'Escape') {
+            setSidebar(false);
+         }
+      });
+
+      document.querySelectorAll('.discover-grid').forEach(function (slider) {
+         var isDragging = false;
+         var didMove = false;
+         var startX = 0;
+         var startScrollLeft = 0;
+
+         slider.addEventListener('pointerdown', function (event) {
+            isDragging = true;
+            didMove = false;
+            startX = event.clientX;
+            startScrollLeft = slider.scrollLeft;
+            slider.classList.add('is-dragging');
+            slider.setPointerCapture(event.pointerId);
+         });
+
+         slider.addEventListener('pointermove', function (event) {
+            if (!isDragging) {
+               return;
+            }
+
+            var deltaX = event.clientX - startX;
+            if (Math.abs(deltaX) > 4) {
+               didMove = true;
+            }
+
+            slider.scrollLeft = startScrollLeft - deltaX;
+         });
+
+         function stopDragging(event) {
+            if (!isDragging) {
+               return;
+            }
+
+            isDragging = false;
+            slider.classList.remove('is-dragging');
+            if (slider.hasPointerCapture && slider.hasPointerCapture(event.pointerId)) {
+               slider.releasePointerCapture(event.pointerId);
+            }
+         }
+
+         slider.addEventListener('pointerup', stopDragging);
+         slider.addEventListener('pointercancel', stopDragging);
+         slider.addEventListener('lostpointercapture', function () {
+            isDragging = false;
+            slider.classList.remove('is-dragging');
+         });
+
+         slider.querySelectorAll('a, button').forEach(function (control) {
+            control.addEventListener('click', function (event) {
+               if (didMove) {
+                  event.preventDefault();
+                  event.stopPropagation();
+               }
+            });
+         });
+      });
+
+      document.querySelectorAll('[data-likes-slider]').forEach(function (slider) {
+         var track = slider.querySelector('.likes-slider__track');
+         var next = slider.querySelector('.likes-slider__next');
+
+         next.addEventListener('click', function () {
+            var firstItem = track.querySelector('img');
+            var step = firstItem ? firstItem.offsetWidth + 9 : 53;
+            var nearEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - step;
+            track.scrollTo({
+               left: nearEnd ? 0 : track.scrollLeft + step,
+               behavior: 'smooth'
+            });
+         });
+      });
+   </script>
+
+
+
+   <!-- Scripts -->
+   <script src="assets/js/jquery.min.js"></script>
+   <script src="assets/js/main.js"></script>
+</body>
+
+</html>

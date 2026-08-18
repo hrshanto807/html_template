@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velori - Customer Service</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="dash-body support-page-body">
+    <main class="dashboard-shell support-shell">
+        <aside class="dash-sidebar" aria-label="Dashboard navigation">
+            <a class="dash-brand" href="index.html">
+                <img src="assets/images/icons/velori-logo.png" alt="Velori">
+            </a>
+            <nav class="dash-nav">
+                <span class="dash-nav__eyebrow">Main Menu</span>
+                <a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+                <a href="dashboard.html"><i class="bi bi-search"></i> Discover</a>
+                <a href="notifications.html"><i class="bi bi-heart"></i> Likes</a>
+                <a href="messages.html"><i class="bi bi-people"></i> Matches</a>
+                <a href="messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
+                <span class="dash-nav__eyebrow">General</span>
+                <a class="active" href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+                <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+            </nav>
+            <div class="premium-box">
+                <div class="premium-box__icon"><img src="assets/images/modals/modal-credits-coin.png" alt=""></div>
+                <h3>Go Premium!</h3>
+                <p>Unlock all features and find your perfect match faster.</p>
+                <a href="#upgrade-modal" data-open-modal="credits">Upgrade Now <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </aside>
+
+        <section class="dash-main support-main">
+            <header class="service-mobile-head">
+                <a href="dashboard.html" aria-label="Back"><i class="bi bi-chevron-left"></i></a>
+                <h1>Customer Service</h1>
+                <span></span>
+            </header>
+
+            <header class="dash-topbar">
+                <div>
+                    <h1>Good Evening, <span>Alex</span></h1>
+                    <p>Ready to make meaningful connection?</p>
+                </div>
+                <div class="dash-actions">
+                    <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade Account</a>
+                    <a class="circle-action" href="messages.html" aria-label="Messages"><i class="bi bi-chat-dots"></i></a>
+                    <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+                    <div class="dash-user">
+                        <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex">
+                        <span>Alex John</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="service-hero">
+                <h2>Hello, how can we help?</h2>
+                <label class="service-search">
+                    <span><i class="bi bi-search"></i></span>
+                    <input type="search" placeholder="Ask a question" aria-label="Ask a question">
+                </label>
+            </section>
+
+            <div class="service-layout">
+                <aside class="service-assist">
+                    <section class="service-language-card">
+                        <label for="supportLanguage">Preferred Language</label>
+                        <select id="supportLanguage" class="js-velori-select">
+                            <option selected>English (US)</option>
+                            <option>English (UK)</option>
+                            <option>Spanish</option>
+                            <option>French</option>
+                        </select>
+                    </section>
+                    <section class="service-contact-card">
+                        <div>
+                            <h3>LET US KNOW</h3>
+                            <p>We are here to help you.</p>
+                        </div>
+                        <img src="assets/images/stickers/envelope-front.png" alt="">
+                    </section>
+                </aside>
+
+                <section class="service-faq">
+                    <h2>Answers on the Spot</h2>
+                    <article class="service-faq-card">
+                        <h3>Getting Started</h3>
+                        <a href="#">Can I try out your services for free?</a>
+                        <a href="#">What are credits?</a>
+                        <a href="#">How can I get matches I prefer?</a>
+                        <a href="#">Why are too many people contacting me?</a>
+                        <a href="#">How can I begin using the site?</a>
+                    </article>
+                    <article class="service-faq-card">
+                        <h3>General Information</h3>
+                        <a href="#">How can I delete my account?</a>
+                        <a href="#">How can I get VIP status?</a>
+                        <a href="#">Can I delete my sent messages and media?</a>
+                        <a href="#">"What is the blue checkmark for?</a>
+                        <a href="#">Can you send me a copy of my conversation with another me...</a>
+                    </article>
+                    <article class="service-faq-card">
+                        <h3>My Profile and Settings</h3>
+                        <a href="#">How can I check my credit balance?</a>
+                        <a href="#">How can I edit my profile?</a>
+                        <a href="#">How can I hide/unhide my profile?</a>
+                        <a href="#">How can I edit my contact list?</a>
+                        <a href="#">How can I locate my account ID number?</a>
+                    </article>
+                    <article class="service-faq-card">
+                        <h3>Services and Features</h3>
+                        <a href="#">How can I video chat?</a>
+                        <a href="#">How can I audio call?</a>
+                        <a href="#">How can I send an audio/voice message?</a>
+                        <a href="#">How can I chat?</a>
+                    </article>
+                    <h2 class="service-transparency-title">Tranparency Center</h2>
+                    <article class="service-faq-card service-faq-card--short">
+                        <h3>Platform Values & Community Guidelines</h3>
+                        <a href="#">Community Guidelines</a>
+                        <a href="#">Our Approach</a>
+                    </article>
+                    <article class="service-faq-card service-faq-card--short">
+                        <h3>How We Prevent Scams</h3>
+                        <a href="#">Scams and Reimbursements Related to Scams</a>
+                        <a href="#">Safety Tips</a>
+                    </article>
+                </section>
+            </div>
+        </section>
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

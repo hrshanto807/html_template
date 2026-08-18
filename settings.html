@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velori - Settings</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="dash-body settings-page-body">
+    <main class="dashboard-shell settings-shell">
+        <aside class="dash-sidebar" aria-label="Dashboard navigation">
+            <a class="dash-brand" href="index.html">
+                <img src="assets/images/icons/velori-logo.png" alt="Velori">
+            </a>
+            <nav class="dash-nav">
+                <span class="dash-nav__eyebrow">Main Menu</span>
+                <a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+                <a href="dashboard.html"><i class="bi bi-search"></i> Discover</a>
+                <a href="notifications.html"><i class="bi bi-heart"></i> Likes</a>
+                <a href="messages.html"><i class="bi bi-people"></i> Matches</a>
+                <a href="messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
+                <span class="dash-nav__eyebrow">General</span>
+                <a class="active" href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+                <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+            </nav>
+            <div class="premium-box">
+                <div class="premium-box__icon"><img src="assets/images/modals/modal-credits-coin.png" alt=""></div>
+                <h3>Go Premium!</h3>
+                <p>Unlock all features and find your perfect match faster.</p>
+                <a href="#upgrade-modal" data-open-modal="credits">Upgrade Now <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </aside>
+
+        <section class="dash-main settings-main">
+            <header class="settings-mobile-head">
+                <a href="dashboard.html" aria-label="Back"><i class="bi bi-chevron-left"></i></a>
+                <h1>Settings</h1>
+                <span></span>
+            </header>
+
+            <header class="dash-topbar">
+                <div>
+                    <h1>Good Evening, <span>Alex</span></h1>
+                    <p>Ready to make meaningful connection?</p>
+                </div>
+                <div class="dash-actions">
+                    <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade Account</a>
+                    <a class="circle-action" href="messages.html" aria-label="Messages"><i class="bi bi-chat-dots"></i></a>
+                    <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+                    <div class="dash-user">
+                        <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex">
+                        <span>Alex John</span>
+                    </div>
+                </div>
+            </header>
+
+            <form class="settings-form">
+                <div class="settings-title-row">
+                    <div>
+                        <h2>Settings</h2>
+                        <p>Manage your personal details here.</p>
+                    </div>
+                    <div class="settings-actions">
+                        <a class="settings-btn settings-btn-outline" href="dashboard.html">Cancel</a>
+                        <button class="settings-btn settings-btn-dark" type="submit">Save</button>
+                    </div>
+                </div>
+
+                <section class="settings-card">
+                    <div class="settings-section settings-section-account">
+                        <h3>Account Information</h3>
+                        <div class="settings-fields">
+                            <label class="settings-field">
+                                <span>Full Name <b>*</b></span>
+                                <input type="text" placeholder="Write here">
+                            </label>
+                            <label class="settings-field">
+                                <span>Email Address <b>*</b></span>
+                                <input type="email" placeholder="Write here">
+                            </label>
+                            <div class="settings-field">
+                                <span>Date of birth <b>*</b></span>
+                                <div class="settings-date-grid">
+                                    <input type="text" placeholder="Month">
+                                    <input type="text" placeholder="Day">
+                                    <input type="text" placeholder="Year">
+                                </div>
+                            </div>
+                            <div class="settings-field settings-field-stack">
+                                <span>Gender <b>*</b></span>
+                                <div>
+                                    <div class="settings-segment settings-segment-two">
+                                        <label><input type="radio" name="gender" checked><span>Male</span></label>
+                                        <label><input type="radio" name="gender"><span>Female</span></label>
+                                    </div>
+                                    <label class="settings-checkbox settings-gender-check">
+                                        <input type="checkbox">
+                                        <span></span>
+                                        Show my gender on my profile
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="settings-field">
+                                <span>Interested in <b>*</b></span>
+                                <div class="settings-segment settings-segment-three">
+                                    <label><input type="radio" name="interest"><span>Man</span></label>
+                                    <label><input type="radio" name="interest" checked><span>Woman</span></label>
+                                    <label><input type="radio" name="interest"><span>Everyone</span></label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section settings-section-security">
+                        <h3>Security</h3>
+                        <div class="settings-fields">
+                            <label class="settings-field">
+                                <span>Enter Password</span>
+                                <span class="settings-password">
+                                    <input type="password" value="abcdefghijklmnop">
+                                    <button class="settings-password-toggle" type="button" aria-label="Show password"><i class="bi bi-eye"></i></button>
+                                </span>
+                            </label>
+                            <label class="settings-field">
+                                <span>Confirm Password</span>
+                                <span class="settings-password">
+                                    <input type="password" value="abcdefghijklmnop">
+                                    <button class="settings-password-toggle" type="button" aria-label="Show password"><i class="bi bi-eye"></i></button>
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-section settings-section-preferences">
+                        <h3>Preferences</h3>
+                        <div class="settings-fields">
+                            <label class="settings-field">
+                                <span>Time Zone</span>
+                                <select class="js-velori-select">
+                                    <option selected>(UTC-08:00) Pacific Time..</option>
+                                    <option>(UTC-05:00) Eastern Time</option>
+                                    <option>(UTC+00:00) London</option>
+                                </select>
+                            </label>
+                            <label class="settings-field">
+                                <span>Language</span>
+                                <select class="js-velori-select">
+                                    <option selected>English (US)</option>
+                                    <option>English (UK)</option>
+                                    <option>Spanish</option>
+                                </select>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="settings-section settings-section-notifications">
+                        <h3>Notifications</h3>
+                        <div class="settings-fields">
+                            <div class="settings-notify-group">
+                                <div class="settings-notify-head">
+                                    <span>Email Notifications</span>
+                                    <label class="settings-switch">
+                                        <input type="checkbox" checked>
+                                        <span></span>
+                                    </label>
+                                    <b>On</b>
+                                </div>
+                                <label class="settings-checkbox settings-option-check">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    <em>
+                                        <strong>News and Update Settings</strong>
+                                        <small>The latest news about the latest features and software update settings</small>
+                                    </em>
+                                </label>
+                                <label class="settings-checkbox settings-option-check">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    <em>
+                                        <strong>Offer and Promotions</strong>
+                                        <small>Promotions about software package prices and about the latest discounts</small>
+                                    </em>
+                                </label>
+                            </div>
+                            <div class="settings-notify-group settings-notify-group-more">
+                                <div class="settings-notify-head">
+                                    <span>More Activity</span>
+                                    <label class="settings-switch">
+                                        <input type="checkbox" checked>
+                                        <span></span>
+                                    </label>
+                                    <b>On</b>
+                                </div>
+                                <label class="settings-checkbox settings-option-check">
+                                    <input type="checkbox">
+                                    <span></span>
+                                    <em>
+                                        <strong>All Reminders & Activity</strong>
+                                        <small>Notify me all system activities and reminders that have been created</small>
+                                    </em>
+                                </label>
+                                <label class="settings-checkbox settings-option-check">
+                                    <input type="checkbox" checked>
+                                    <span></span>
+                                    <em>
+                                        <strong>Important Reminder only</strong>
+                                        <small>Only notify me all the reminders that have been made</small>
+                                    </em>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="settings-section settings-section-delete">
+                        <h3>Account</h3>
+                        <div class="settings-delete-copy">
+                            <h4>Delete Account</h4>
+                            <p>When you delete your account, you lose access to Front account services, and we permanently delete your personal data. You can cancel the deletion for 14 days.</p>
+                        </div>
+                        <button class="settings-delete-btn" type="button">Delete Account</button>
+                    </div>
+                </section>
+            </form>
+        </section>
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

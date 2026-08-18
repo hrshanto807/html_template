@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velori - Create Account</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/auth-dark.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="auth-body">
+    <main class="auth-layout auth-layout--register">
+        <!-- Left Side Art -->
+        <section class="auth-art">
+            <a href="index.html" class="auth-art__logo">
+                <img src="assets/images/regs.png" alt="Velori">
+            </a>
+            <div class="auth-art__copy">
+                <p>Anyone who has ever been truly in love knows the irresistible urge to tell the world. No matter how often you remind your partner how much they mean to you, there's something uniquely special about expressing that love openly.</p>
+                <div class="auth-art__quote">"Love recognizes no barriers."</div>
+                <div class="auth-author">
+                    <img src="assets/images/profiles/profile-1.jpg" alt="Maya Angelou">
+                    <span>Maya Angelou</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Right Side Form -->
+        <section class="auth-panel auth-panel--long">
+            <a href="index.html" class="auth-mobile-logo">
+                <img src="assets/images/regs.png" alt="Velori">
+            </a>
+            <h2>Create Account</h2>
+
+            <form class="dark-form" action="dashboard.html" id="registerForm" novalidate>
+                <!-- Profile Photos -->
+                <div class="form-group">
+                    <div class="photo-upload-container">
+                        <div class="photo-upload-copy">
+                            <label>Profile photos <span>*</span></label>
+                            <div class="photo-upload-info">
+                                <i class="bi bi-info-circle"></i>
+                                <p>Hold, drag and drop or press Space bar and Arrow keys to reorder your photos. upload two photos</p>
+                            </div>
+                        </div>
+                        <div class="photo-boxes">
+                            <label class="photo-box">
+                                <input type="file" accept="image/*" class="photo-input" aria-label="Upload profile photo 1">
+                                <i class="bi bi-plus-lg"></i>
+                            </label>
+                            <label class="photo-box">
+                                <input type="file" accept="image/*" class="photo-input" aria-label="Upload profile photo 2">
+                                <i class="bi bi-plus-lg"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Name and Email Row -->
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Full Name <span>*</span></label>
+                        <input type="text" id="regName" placeholder="Write here" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address <span>*</span></label>
+                        <input type="email" id="regEmail" placeholder="Write here" required>
+                    </div>
+                </div>
+
+                <!-- Date of Birth -->
+                <div class="form-group">
+                    <label>Date of birth <span>*</span></label>
+                    <div class="form-row">
+                        <select class="date-select" id="regDay" required>
+                            <option value="" disabled selected>Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <select class="date-select" id="regMonth" required>
+                            <option value="" disabled selected>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                        </select>
+                        <select class="date-select" id="regYear" required>
+                            <option value="" disabled selected>Year</option>
+                            <option value="1990">1990</option>
+                            <option value="1995">1995</option>
+                            <option value="2000">2000</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Gender -->
+                <div class="form-group">
+                    <label>Gender <span>*</span></label>
+                    <div class="pill-group">
+                        <label class="pill-radio"><input type="radio" name="gender" value="male" checked> <span>Male</span></label>
+                        <label class="pill-radio"><input type="radio" name="gender" value="female"> <span>Female</span></label>
+                    </div>
+                </div>
+                <label class="dark-checkbox">
+                    <input type="checkbox">
+                    Show my gender on my profile
+                </label>
+
+                <!-- Interested in -->
+                <div class="form-group" style="margin-top: 10px;">
+                    <label>Interested in <span>*</span></label>
+                    <div class="pill-group">
+                        <label class="pill-radio"><input type="radio" name="interested" value="man"> <span>Man</span></label>
+                        <label class="pill-radio"><input type="radio" name="interested" value="woman"> <span>Woman</span></label>
+                        <label class="pill-radio"><input type="radio" name="interested" value="everyone"> <span>Everyone</span></label>
+                    </div>
+                </div>
+
+                <!-- Looking for -->
+                <div class="form-group d-none">
+                    <label>Looking for <span>*</span></label>
+                    <button type="button" class="add-btn"><i class="bi bi-plus-lg"></i> Add Relationship Intent</button>
+                </div>
+
+                <div class="optional-divider d-none">Optional</div>
+
+                <!-- Interests -->
+                <div class="form-group d-none">
+                    <label>Interests</label>
+                    <button type="button" class="add-btn"><i class="bi bi-plus-lg"></i> Add Interests</button>
+                </div>
+
+                <!-- Submit -->
+                <button class="btn btn--pink auth-submit" type="submit" formnovalidate>CONTINUE</button>
+
+                <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+            </form>
+        </section>
+    </main>
+    <script>
+        document.querySelectorAll('.photo-input').forEach((input) => {
+            input.addEventListener('change', () => {
+                const file = input.files && input.files[0];
+                const box = input.closest('.photo-box');
+
+                if (!file || !box) {
+                    return;
+                }
+
+                const oldPreview = box.querySelector('img');
+                if (oldPreview) {
+                    oldPreview.remove();
+                }
+
+                const preview = document.createElement('img');
+                preview.src = URL.createObjectURL(file);
+                preview.alt = 'Uploaded profile photo';
+                preview.onload = () => URL.revokeObjectURL(preview.src);
+
+                box.appendChild(preview);
+                box.classList.add('has-image');
+            });
+        });
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

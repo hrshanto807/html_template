@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velori - Messages</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="dash-body messages-body">
+    <main class="dashboard-shell messages-shell">
+        <aside class="dash-sidebar" aria-label="Dashboard navigation">
+            <a class="dash-brand" href="index.html">
+                <img src="assets/images/icons/velori-logo.png" alt="Velori">
+            </a>
+            <div class="dash-drawer-user">
+                <a class="dash-drawer-profile" href="profile.html">
+                    <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex John">
+                    <span><strong>Alex John</strong><small>View Profile <i class="bi bi-arrow-up-right"></i></small></span>
+                </a>
+                <button class="dash-drawer-close" type="button" aria-label="Close menu"><i class="bi bi-x-lg"></i></button>
+            </div>
+            <nav class="dash-drawer-nav" aria-label="Mobile dashboard navigation">
+                <span class="dash-drawer-eyebrow">General</span>
+                <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+                <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+                <a href="notifications.html"><i class="bi bi-bell"></i> Notifications <b>3</b></a>
+                <a class="dash-drawer-upgrade" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-crown"></i> Upgrade to premium</a>
+                <span class="dash-drawer-eyebrow">Support</span>
+                <a href="help.html"><i class="bi bi-question-circle"></i> Help & Support</a>
+                <a href="terms.html"><i class="bi bi-file-earmark-text"></i> Terms & Conditions</a>
+                <a class="dash-drawer-logout" href="login.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+            </nav>
+            <nav class="dash-nav">
+                <span class="dash-nav__eyebrow">Main Menu</span>
+                <a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+                <a href="dashboard.html"><i class="bi bi-search"></i> Discover</a>
+                <a href="notifications.html"><i class="bi bi-heart"></i> Likes</a>
+                <a href="messages.html"><i class="bi bi-people"></i> Matches</a>
+                <a class="active" href="messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
+                <span class="dash-nav__eyebrow">General</span>
+                <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+                <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+            </nav>
+            <div class="premium-box">
+                <div class="premium-box__icon"><img src="assets/images/modals/modal-credits-coin.png" alt=""></div>
+                <h3>Go Premium!</h3>
+                <p>Unlock all features and find your perfect match faster.</p>
+                <a href="#upgrade-modal" data-open-modal="credits">Upgrade Now <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </aside>
+        <button class="dash-sidebar-backdrop" type="button" aria-label="Close menu"></button>
+
+        <section class="dash-main messages-main">
+            <header class="dash-mobile-head messages-mobile-head">
+                <button class="dash-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"><i class="bi bi-list"></i></button>
+                <a class="dash-mobile-brand" href="index.html"><img src="assets/images/icons/velori-logo.png" alt="Velori"></a>
+                <div class="dash-mobile-actions">
+                    <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade</a>
+                    <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+                </div>
+            </header>
+
+            <header class="dash-topbar messages-topbar">
+                <div>
+                    <h1>Good Evening, <span>Alex</span></h1>
+                    <p>Ready to make meaningful connection?</p>
+                </div>
+                <div class="dash-actions">
+                    <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade Account</a>
+                    <a class="circle-action" href="messages.html" aria-label="Messages"><i class="bi bi-chat-dots"></i></a>
+                    
+                    <!-- Notification Popup Trigger & Panel -->
+                    <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+
+                    <!-- Profile Dropdown Trigger & Menu -->
+                    <button class="dash-user" type="button">
+                        <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex">
+                        <span>Alex John</span>
+                    </button>
+                </div>
+            </header>
+
+            <div class="messages-layout">
+                <section class="messages-list-card">
+                    <div class="messages-list-head">
+                        <h2>Messaging</h2>
+                        <span>137</span>
+                    </div>
+                    <label class="messages-search">
+                        <i class="bi bi-search"></i>
+                        <input type="search" placeholder="Search....">
+                    </label>
+
+                    <section class="mobile-new-matches">
+                        <h2>New Matches</h2>
+                        <div class="mobile-match-strip">
+                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-2.jpg" alt="Emma"></span><strong>Emma, 27</strong></a>
+                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-9.jpg" alt="Liam"></span><strong>Liam, 30 <i class="bi bi-patch-check-fill"></i></strong></a>
+                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-4.jpg" alt="Sophia"></span><strong>Sophia, 25 <i class="bi bi-patch-check-fill"></i></strong></a>
+                            <a href="someone-profile.html"><span><img src="assets/images/profiles/profile-10.jpg" alt="Noah"></span><strong>Noah, 32</strong></a>
+                        </div>
+                    </section>
+                    <h2 class="messages-mobile-title">Messages</h2>
+
+                    <div class="message-thread-list">
+                        <a class="message-thread active" href="#chat"><span class="message-avatar"><img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella"></span><span class="message-thread-copy"><strong>Isabella</strong><small>Thank you very much. I'm...</small></span><time>2h</time></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-5.jpg" alt="Ethan"></span><span class="message-thread-copy"><strong>Ethan</strong><small>Hey.</small></span><time>1d</time></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-6.jpg" alt="Jakob Saris"></span><span class="message-thread-copy"><strong>Jakob Saris</strong><small>Hi there!</small></span><time>3h</time></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-5.jpg" alt="Ethan"></span><span class="message-thread-copy"><strong>Ethan</strong><small>Hey.</small></span><time>1d</time></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-12.jpg" alt="Ava"></span><span class="message-thread-copy"><strong>Ava</strong><small>Hi there!</small></span><time>3h</time></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-7.jpg" alt="Jeremy Zucker"></span><span class="message-thread-copy"><strong>Jeremy Zucker</strong><small>Hi there!</small></span><time>3h</time></a>
+                        <a class="message-thread" href="#chat"><span class="message-avatar"><img src="assets/images/profiles/profile-12.jpg" alt="Ava"></span><span class="message-thread-copy"><strong>Ava</strong><small>Hi there!</small></span><time>3h</time></a>
+                    </div>
+                </section>
+
+                <section class="messages-chat-card" id="chat">
+                    <header class="messages-chat-head">
+                        <a class="messages-chat-back" href="javascript:void(0);" aria-label="Back to messages"><i class="bi bi-chevron-left"></i></a>
+                        <div class="messages-chat-person">
+                            <img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella">
+                            <span><strong>Isabella</strong><small><i></i> Online</small></span>
+                        </div>
+                        <div class="messages-chat-actions">
+                            <a href="#" aria-label="Video call"><i class="bi bi-camera-video"></i></a>
+                            <a href="#" aria-label="Phone call"><i class="bi bi-telephone"></i></a>
+                        </div>
+                    </header>
+                    <div class="messages-chat-body" id="chatBody">
+                        <div class="chat-date-pill">Today 10:27am</div>
+                        <div class="chat-row incoming short"><img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella"><p>Hey!</p></div>
+                        <div class="chat-row outgoing"><p>Hey we haven't seen each other in like 2 weeks hahaha do you want to go grab coffee nearby?</p></div>
+                        <div class="chat-row outgoing"><p>I just need to find some time on my calendar since I have been so busy, and I know we both have!</p></div>
+                        <div class="chat-row incoming"><img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella"><p>Yes I would love that!</p></div>
+                        <div class="chat-row incoming"><img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella"><p>Pick a place</p></div>
+                        <div class="chat-row outgoing location"><p>Beans and Cats at <u>5402 N State St</u></p></div>
+                        <div class="chat-row incoming wide"><img src="assets/images/avatars/avatar-isabella.jpg" alt="Isabella"><p>Thanks, I can't wait to see you tomorrow for coffee!</p></div>
+                    </div>
+                    <section class="gift-panel" aria-label="Gift messages">
+                        <div class="gift-panel__head">
+                            <div class="gift-balance">
+                                <img src="assets/images/modals/modal-credits-coin.png" alt="">
+                                <span><small>Your Balance</small><strong>125 <b>Credits</b></strong></span>
+                            </div>
+                            <button type="button">BUY CREDIT</button>
+                        </div>
+                        <div class="gift-grid">
+                            <button type="button" data-gift="Love letter" data-credit="77"><img src="assets/images/stickers/message-front.png" alt=""><span>77 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Two hearts" data-credit="77"><img src="assets/images/stickers/two-hearts.png" alt=""><span>77 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Heart wings" data-credit="120"><img src="assets/images/stickers/heart-with-wings-front.png" alt=""><span>120 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Ring box" data-credit="120"><img src="assets/images/stickers/box-with-ring-front.png" alt=""><span>120 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Rings" data-credit="77"><img src="assets/images/stickers/ring.png" alt=""><span>77 Credits</span></button>
+                            <button type="button" data-gift="Toast" data-credit="77"><img src="assets/images/stickers/cards-front.png" alt=""><span>77 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Gift box" data-credit="120"><img src="assets/images/stickers/chocolate-front.png" alt=""><span>120 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Bouquet" data-credit="120"><img src="assets/images/stickers/bow-with-arrow.png" alt=""><span>120 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Love" data-credit="77"><img src="assets/images/stickers/i-love-you-1.png" alt=""><span>77 Credits</span></button>
+                            <button type="button" data-gift="Chocolate" data-credit="77"><img src="assets/images/stickers/chocolate-front-1.png" alt=""><span>77 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Heart lock" data-credit="120"><img src="assets/images/stickers/lock-with-heart.png" alt=""><span>120 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Envelope" data-credit="120"><img src="assets/images/stickers/envelope-front.png" alt=""><span>120 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Mug" data-credit="77"><img src="assets/images/stickers/mail.png" alt=""><span>77 Credits</span></button>
+                            <button type="button" data-gift="Message" data-credit="77"><img src="assets/images/stickers/message-front-1.png" alt=""><span>77 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Smile" data-credit="120"><img src="assets/images/stickers/smile-angle.png" alt=""><span>120 Credits</span><i class="bi bi-lock"></i></button>
+                            <button type="button" data-gift="Cupid" data-credit="120"><img src="assets/images/stickers/heart-with-arrow.png" alt=""><span>120 Credits</span><i class="bi bi-lock"></i></button>
+                        </div>
+                    </section>
+                    <form class="messages-compose" id="chatForm">
+                        <button type="button" aria-label="Add attachment"><i class="bi bi-grid"></i></button>
+                        <div class="messages-compose-field">
+                            <button class="gift-toggle" type="button" aria-label="Open gift messages" aria-expanded="false"><i class="bi bi-emoji-smile"></i></button>
+                            <input type="text" id="chatInput" placeholder="Write Here...." autocomplete="off">
+                            <button type="submit" aria-label="Send message"><i class="bi bi-send-fill"></i></button>
+                        </div>
+                        <button type="button" aria-label="Voice message"><i class="bi bi-mic"></i></button>
+                    </form>
+                </section>
+
+                <aside class="messages-matches-card">
+                    <h2>New Matches</h2>
+                    <div class="message-match-list">
+                        <article class="message-match-item"><img src="assets/images/profiles/profile-2.jpg" alt="Emma"><div><h3>Emma, 27 <i class="bi bi-patch-check-fill"></i></h3><p><i class="bi bi-geo-alt-fill"></i> 3 miles away</p><span><b>Travel</b><b>Music</b><b>+2</b></span></div></article>
+                        <article class="message-match-item"><img src="assets/images/profiles/profile-9.jpg" alt="Liam"><div><h3>Liam, 30 <i class="bi bi-patch-check-fill"></i></h3><p><i class="bi bi-geo-alt-fill"></i> 5 miles away</p><span><b>Food</b><b>Art</b><b>+3</b></span></div></article>
+                        <article class="message-match-item"><img src="assets/images/profiles/profile-4.jpg" alt="Sophia"><div><h3>Sophia, 25 <i class="bi bi-patch-check-fill"></i></h3><p><i class="bi bi-geo-alt-fill"></i> 2 miles away</p><span><b>Fitness</b><b>Movies</b><b>+1</b></span></div></article>
+                        <article class="message-match-item"><img src="assets/images/profiles/profile-10.jpg" alt="Noah"><div><h3>Noah, 32 <i class="bi bi-patch-check-fill"></i></h3><p><i class="bi bi-geo-alt-fill"></i> 8 miles away</p><span><b>Travel</b><b>Art</b><b>+4</b></span></div></article>
+                        <article class="message-match-item"><img src="assets/images/profiles/profile-5.jpg" alt="Olivia"><div><h3>Olivia, 29 <i class="bi bi-patch-check-fill"></i></h3><p><i class="bi bi-geo-alt-fill"></i> 6 miles away</p><span><b>Books</b><b>Cooking</b><b>+2</b></span></div></article>
+                        <article class="message-match-item"><img src="assets/images/profiles/profile-3.jpg" alt="Ava"><div><h3>Ava, 26 <i class="bi bi-patch-check-fill"></i></h3><p><i class="bi bi-geo-alt-fill"></i> 4 miles away</p><span><b>Technology</b><b>Gaming</b><b>+3</b></span></div></article>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <nav class="mobile-bottom-nav" aria-label="Mobile dashboard navigation">
+            <a href="dashboard.html"><i class="bi bi-grid"></i><span>Dashboard</span></a>
+            <a href="dashboard.html"><i class="bi bi-search"></i><span>Discover</span></a>
+            <a href="notifications.html"><i class="bi bi-heart"></i><span>Likes</span></a>
+            <a href="messages.html"><i class="bi bi-people"></i><span>Matches</span></a>
+            <a class="active" href="messages.html"><i class="bi bi-chat-dots"></i><span>Messages</span></a>
+        </nav>
+    </main>
+
+    <script>
+        var dashBody = document.body;
+        var menuButton = document.querySelector('.dash-menu-btn');
+        var closeButtons = document.querySelectorAll('.dash-drawer-close, .dash-sidebar-backdrop');
+        var drawerLinks = document.querySelectorAll('.dash-drawer-nav a');
+
+        function setSidebar(open) {
+            dashBody.classList.toggle('is-sidebar-open', open);
+            if (menuButton) {
+                menuButton.setAttribute('aria-expanded', String(open));
+            }
+        }
+
+        if (menuButton) {
+            menuButton.addEventListener('click', function () {
+                setSidebar(true);
+            });
+        }
+
+        closeButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                setSidebar(false);
+            });
+        });
+
+        drawerLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                setSidebar(false);
+            });
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                setSidebar(false);
+                setGiftPanel(false);
+            }
+        });
+
+        var matchStrip = document.querySelector('.mobile-match-strip');
+        if (matchStrip) {
+            var isDown = false;
+            var startX = 0;
+            var scrollLeft = 0;
+
+            matchStrip.addEventListener('pointerdown', function (event) {
+                isDown = true;
+                startX = event.pageX;
+                scrollLeft = matchStrip.scrollLeft;
+                matchStrip.classList.add('is-dragging');
+                matchStrip.setPointerCapture(event.pointerId);
+            });
+
+            matchStrip.addEventListener('pointermove', function (event) {
+                if (!isDown) return;
+                event.preventDefault();
+                matchStrip.scrollLeft = scrollLeft - (event.pageX - startX);
+            });
+
+            function stopDrag() {
+                isDown = false;
+                matchStrip.classList.remove('is-dragging');
+            }
+
+            matchStrip.addEventListener('pointerup', stopDrag);
+            matchStrip.addEventListener('pointercancel', stopDrag);
+            matchStrip.addEventListener('pointerleave', stopDrag);
+        }
+
+        var composeForm = document.querySelector('.messages-compose');
+        var composeInput = document.querySelector('.messages-compose-field input');
+        var chatBody = document.querySelector('.messages-chat-body');
+
+        if (composeForm && composeInput && chatBody) {
+            composeForm.addEventListener('submit', function (event) {
+                event.preventDefault();
+                var text = composeInput.value.trim();
+                if (!text) return;
+
+                var row = document.createElement('div');
+                row.className = 'chat-row outgoing';
+                var bubble = document.createElement('p');
+                bubble.textContent = text;
+                row.appendChild(bubble);
+                chatBody.appendChild(row);
+                composeInput.value = '';
+                chatBody.scrollTop = chatBody.scrollHeight;
+            });
+        }
+
+        var giftToggle = document.querySelector('.gift-toggle');
+        var giftPanel = document.querySelector('.gift-panel');
+        var giftButtons = document.querySelectorAll('.gift-grid button');
+
+        function setGiftPanel(open) {
+            document.body.classList.toggle('is-gift-open', open);
+            if (giftToggle) {
+                giftToggle.setAttribute('aria-expanded', String(open));
+            }
+        }
+
+        if (giftToggle && giftPanel) {
+            giftToggle.addEventListener('click', function () {
+                setGiftPanel(!document.body.classList.contains('is-gift-open'));
+            });
+        }
+
+        giftButtons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                if (!chatBody) return;
+                var row = document.createElement('div');
+                row.className = 'chat-row outgoing gift-sent';
+                var bubble = document.createElement('p');
+                var img = document.createElement('img');
+                var label = document.createElement('span');
+                img.src = button.querySelector('img').src;
+                img.alt = button.dataset.gift || 'Gift';
+                label.textContent = (button.dataset.gift || 'Gift') + ' - ' + (button.dataset.credit || '77') + ' Credits';
+                bubble.appendChild(img);
+                bubble.appendChild(label);
+                row.appendChild(bubble);
+                chatBody.appendChild(row);
+                setGiftPanel(false);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            });
+        });
+
+        // Conversation Thread Switching
+        var chatPersonImg = document.querySelector('.messages-chat-person img');
+        var chatPersonName = document.querySelector('.messages-chat-person strong');
+
+        function openMobileChat() {
+            document.body.classList.add('is-chat-open');
+        }
+
+        function closeMobileChat() {
+            document.body.classList.remove('is-chat-open');
+            if (window.location.hash) {
+                try {
+                    history.pushState('', document.title, window.location.pathname);
+                } catch(e) {
+                    window.location.hash = '';
+                }
+            }
+        }
+
+        document.querySelectorAll('.message-thread').forEach(function(thread) {
+            thread.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.message-thread').forEach(function(t) { t.classList.remove('active'); });
+                thread.classList.add('active');
+
+                var name = thread.querySelector('strong') ? thread.querySelector('strong').textContent : 'Isabella';
+                var img = thread.querySelector('.message-avatar img') ? thread.querySelector('.message-avatar img').src : '';
+                
+                if (chatPersonName) chatPersonName.textContent = name;
+                if (chatPersonImg && img) chatPersonImg.src = img;
+
+                openMobileChat();
+            });
+        });
+
+        // Match items click -> open chat
+        document.querySelectorAll('.mobile-match-strip a, .message-match-item').forEach(function(item) {
+            item.addEventListener('click', function(e) {
+                if (item.matches('a[href$="someone-profile.html"]')) {
+                    return;
+                }
+
+                e.preventDefault();
+                var nameEl = item.querySelector('strong, h3');
+                var name = nameEl ? nameEl.textContent.trim().split(',')[0] : 'Match';
+                var imgEl = item.querySelector('img');
+                var img = imgEl ? imgEl.src : '';
+
+                if (chatPersonName) chatPersonName.textContent = name;
+                if (chatPersonImg && img) chatPersonImg.src = img;
+
+                openMobileChat();
+            });
+        });
+
+        // Back button on mobile chat
+        var backBtn = document.querySelector('.messages-chat-back');
+        if (backBtn) {
+            backBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                closeMobileChat();
+            });
+        }
+
+        document.addEventListener('click', function (event) {
+            if (!document.body.classList.contains('is-gift-open')) return;
+            if (giftPanel && giftPanel.contains(event.target)) return;
+            if (giftToggle && giftToggle.contains(event.target)) return;
+            setGiftPanel(false);
+        });
+    </script>
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

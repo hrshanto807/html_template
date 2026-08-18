@@ -1,0 +1,623 @@
+/* ==========================================================================
+   VELORI - Responsive Breakpoints & Device Specific Styling (Desktop + Mobile)
+   ========================================================================== */
+
+/* Extra Large Devices (1200px and up) */
+
+@media (min-width: 1200px) {
+   .container {
+      max-width: 1200px;
+   }
+}
+
+/* Medium Devices (Tablets, 991px and down) */
+
+@media (max-width: 1180px) {
+   .nav-shell {
+      gap: 20px;
+   }
+
+   .nav-links {
+      gap: 22px;
+   }
+
+   .hero__copy,
+   .hero__polaroids {
+      left: 7%;
+   }
+
+   .hero__intro {
+      left: auto;
+      right: 7%;
+   }
+
+   .social-rail {
+      right: 24px;
+   }
+}
+
+@media (max-width: 1100px) {
+   .app-page-shell {
+      grid-template-columns: 1fr;
+   }
+
+   .split-layout,
+   .profile-hero-card {
+      grid-template-columns: 1fr;
+   }
+
+   .chat-panel {
+      min-height: 560px;
+   }
+
+   .help-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+}
+
+@media (max-width: 991px) {
+
+   .brand img {
+      width: clamp(94px, 28vw, 120px);
+   }
+
+
+   .nav-shell {
+      top: 15px;
+      width: calc(100% - 32px);
+      min-height: 65px;
+      flex-wrap: nowrap;
+      gap: 8px;
+      padding: 8px 10px 8px 18px;
+      border-radius: 36px;
+   }
+
+   .nav-actions .btn--ghost {
+      display: none;
+   }
+
+   .nav-actions .btn--pink {
+      display: inline-flex;
+      padding: 10px 30px;
+      font-size: 16px;
+      border-radius: 100px;
+   }
+
+   .nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 220px;
+      background: var(--bg-white, #fff);
+      padding: 16px;
+      border-radius: 20px;
+      margin-top: 10px;
+      box-shadow: var(--shadow-lg, 0 16px 40px rgba(0, 0, 0, 0.15));
+      z-index: 1000;
+      gap: 4px;
+
+      /* Dropdown Animation */
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-15px);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+   }
+
+   .nav-links.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+   }
+
+   .nav-links a {
+      padding: 12px 16px;
+      color: var(--dark-color, #212121);
+      font-weight: 500;
+      font-size: 16px;
+      border-radius: var(--radius-md, 14px);
+      transition: all 0.3s ease;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+   }
+
+   .mobile-only-link {
+      display: flex;
+   }
+
+   .mobile-icon {
+      display: block;
+      font-size: 18px;
+      color: var(--text-muted);
+   }
+
+   .nav-links a:hover {
+      background: var(--light-pink-bg, #F4DDE4);
+      color: var(--primary-color, #EF295F);
+   }
+
+   .nav-links a:hover .mobile-icon {
+      color: var(--primary-color, #EF295F);
+   }
+
+   .nav-actions {
+      z-index: 1000;
+      position: relative;
+      width: auto;
+      margin-left: auto;
+      gap: 12px;
+   }
+
+   .mobile-menu-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+
+   .hero-title {
+      font-size: 44px;
+   }
+
+   .hero-desc {
+      font-size: 15px;
+   }
+
+   .hero-social-sidebar {
+      display: none;
+   }
+
+   .section-title {
+      font-size: 34px;
+      margin-bottom: 36px;
+   }
+
+   .story-title {
+      font-size: 38px;
+   }
+
+   .process-section {
+      padding: 70px 0;
+   }
+
+   .story-section {
+      padding: 80px 0;
+   }
+
+   .footer-brand-logo {
+      font-size: 40px;
+      letter-spacing: 8px;
+   }
+
+   .app-sidebar {
+      transform: translateX(-100%);
+   }
+
+   .app-sidebar.show-sidebar {
+      transform: translateX(0);
+   }
+
+   .app-main {
+      margin-left: 0;
+      padding: 20px 16px 90px;
+   }
+
+   .mobile-bottom-nav {
+      display: flex;
+   }
+
+   .chat-matches-col {
+      display: none;
+   }
+
+   .process-grid-2x2 {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+   }
+
+   .process-center-heart {
+      display: none;
+   }
+
+   .settings-section-row {
+      flex-direction: column;
+      gap: 16px;
+      padding: 24px 16px;
+   }
+
+   .settings-category-col {
+      width: 100%;
+   }
+
+   .terms-container-card {
+      flex-direction: column;
+   }
+
+   .terms-toc-col {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid var(--border-color);
+   }
+
+   .terms-content-col {
+      padding: 24px 16px;
+   }
+}
+
+/* Small Devices (Landscape Phones / Tablets, 767px and down) */
+
+@media (max-width: 900px) {
+   .hero {
+      min-height: 840px;
+   }
+
+   .hero__polaroids {
+      top: 170px;
+   }
+
+   .hero__copy {
+      top: 295px;
+   }
+
+   .hero__intro {
+      left: 7%;
+      right: 7%;
+      top: 560px;
+      width: auto;
+      max-width: 430px;
+   }
+
+   .social-rail {
+      display: none;
+   }
+
+   .process-map {
+      display: grid;
+      min-height: auto;
+      grid-template-columns: 1fr;
+      gap: 18px;
+   }
+
+   .process-map__outline,
+   .process-map__mark {
+      display: none;
+   }
+
+   .step-card {
+      position: static;
+      width: 100%;
+   }
+
+   .story-banner {
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .footer__bottom {
+      grid-template-columns: 1fr;
+      text-align: center;
+   }
+
+   .footer__links {
+      justify-content: center;
+   }
+
+   .copyright {
+      text-align: center;
+   }
+}
+
+@media (max-width: 767px) {
+   .landing-header {
+      padding: 16px 0;
+   }
+
+   .hero-section {
+      padding: 120px 0 60px;
+      min-height: auto;
+   }
+
+   .hero-title {
+      font-size: 34px;
+      line-height: 1.2;
+   }
+
+   .hero-desc {
+      font-size: 14.5px;
+      margin-bottom: 28px;
+   }
+
+   .hero-btn-group {
+      flex-direction: column;
+      align-items: stretch;
+   }
+
+   .hero-btn-group .btn-velori-primary,
+   .hero-btn-group .btn-velori-outline {
+      width: 100%;
+   }
+
+   .hero-polaroids {
+      display: none;
+   }
+
+   .process-card {
+      padding: 26px 20px;
+   }
+
+   .process-card-title {
+      font-size: 19px;
+   }
+
+   .story-title {
+      font-size: 30px;
+   }
+
+   .story-desc {
+      font-size: 14.5px;
+   }
+
+   .footer-brand-logo {
+      font-size: 32px;
+      letter-spacing: 6px;
+   }
+
+   .footer-nav {
+      gap: 20px;
+   }
+
+   .chat-conversations-col {
+      width: 100%;
+      border-right: none;
+   }
+
+   .chat-main-area {
+      display: none;
+   }
+
+   .chat-container-card {
+      height: auto;
+      min-height: 500px;
+   }
+
+   .gallery-grid-4 {
+      grid-template-columns: 1fr;
+   }
+
+   .modal-credits-dialog {
+      max-width: 95%;
+      margin: 10px auto;
+   }
+}
+
+/* Extra Small Devices (Mobiles, 575px and down) */
+
+@media (max-width: 700px) {
+   .page-main {
+      padding: 22px;
+   }
+
+   .page-header {
+      align-items: flex-start;
+      flex-direction: column;
+   }
+
+   .page-actions,
+   .page-actions .btn {
+      width: 100%;
+   }
+
+   .bubble {
+      max-width: 88%;
+   }
+
+   .form-grid,
+   .photo-grid,
+   .help-grid {
+      grid-template-columns: 1fr;
+   }
+
+   .profile-cover img {
+      min-height: 420px;
+   }
+
+   .profile-detail,
+   .content-pad {
+      padding: 22px;
+   }
+}
+
+@media (max-width: 640px) {
+   .hero {
+      min-height: 785px;
+      overflow: hidden;
+   }
+
+   .hero__polaroids {
+      top: 224px;
+      left: 20px;
+      width: 155px;
+      height: 112px;
+   }
+
+   .polaroid {
+      width: 68.93px;
+      height: 73.48px;
+      border-width: 2px;
+   }
+
+   .hero__watermark {
+      left: -67px;
+      bottom: 79px;
+      width: 225px;
+      opacity: .13;
+   }
+
+   .hero__copy {
+      top: 352px;
+      left: 17px;
+      right: 14px;
+   }
+
+   .hero__copy h1 {
+      font-size: 46px;
+      line-height: 1.42;
+   }
+
+   .hero__intro {
+      top: 488px;
+      left: 17px;
+      right: 17px;
+      max-width: none;
+   }
+
+   .hero__intro p {
+      margin-bottom: 20px;
+      font-size: 18px;
+      line-height: 26px;
+   }
+
+   .hero__buttons {
+      align-items: center;
+      flex-direction: row;
+      max-width: none;
+      gap: 13px;
+      flex-wrap: nowrap;
+   }
+
+   .hero__buttons .btn {
+      height: 46px;
+      min-height: 46px;
+      padding: 0 24px;
+   }
+
+   .hero__buttons .btn--icon {
+      padding-left: 5px;
+      padding-right: 22px;
+   }
+
+   .social-rail {
+      display: flex;
+      top: 184px;
+      right: 18px;
+      gap: 9px;
+   }
+
+   .process {
+      padding: 64px 24px 105px;
+   }
+
+   .section-title h2 {
+      font-size: 44px;
+   }
+
+   .process-map {
+      margin-top: 45px;
+      gap: 16px;
+   }
+
+   .step-card {
+      min-height: 188px;
+      padding: 29px 21px 24px;
+   }
+
+   .story-banner {
+      min-height: 332px;
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   .story-banner__image {
+      min-height: 332px;
+   }
+
+   .story-banner__image--three,
+   .story-banner__image--four {
+      display: none;
+   }
+
+   .story-banner__content h2 {
+      font-size: 40px;
+      line-height: 1.15;
+   }
+
+   .story-banner__content p {
+      font-size: 17px;
+   }
+
+   .footer {
+      padding: 67px 10px 38px;
+   }
+
+   .footer__logo {
+      width: calc(100% - 46px);
+      margin-bottom: 50px;
+   }
+
+   .footer__bottom {
+      padding-top: 38px;
+      gap: 34px;
+   }
+
+   .footer__links {
+      display: flex;
+      justify-content: space-around;
+      gap: 16px;
+   }
+
+   .copyright {
+      max-width: 300px;
+      margin-inline: auto;
+      line-height: 27px;
+   }
+}
+
+@media (max-width: 575px) {
+   .hero-title {
+      font-size: 28px;
+   }
+
+   .brand-logo-img {
+      height: 28px;
+   }
+
+   .section-title {
+      font-size: 26px;
+   }
+
+   .footer-section {
+      padding: 60px 0 30px;
+   }
+
+   .footer-brand-logo {
+      font-size: 24px;
+      letter-spacing: 4px;
+   }
+
+   .topbar-greeting h2 {
+      font-size: 22px;
+   }
+
+   .btn-start-story {
+      width: 100%;
+      font-size: 11px;
+      padding: 12px 18px;
+   }
+
+   .profile-discover-card {
+      height: 360px;
+   }
+
+   .settings-main-card {
+      padding: 0;
+   }
+
+   .pill-select-group {
+      flex-direction: column;
+   }
+}
+
+
+/* Moved from style.css */

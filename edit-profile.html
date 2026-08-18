@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velori - Edit Profile</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="dash-body edit-profile-body">
+    <main class="dashboard-shell">
+        <aside class="dash-sidebar" aria-label="Dashboard navigation">
+            <a class="dash-brand" href="index.html">
+                <img src="assets/images/icons/velori-logo.png" alt="Velori">
+            </a>
+            <nav class="dash-nav">
+            <span class="dash-nav__eyebrow">Main Menu</span>
+            <a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+            <a href="dashboard.html"><i class="bi bi-search"></i> Discover</a>
+            <a href="notifications.html"><i class="bi bi-heart"></i> Likes</a>
+            <a href="messages.html"><i class="bi bi-people"></i> Matches</a>
+            <a href="messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
+            <span class="dash-nav__eyebrow">General</span>
+            <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+            <a class="active" href="profile.html"><i class="bi bi-person"></i> Profile</a>
+            </nav>
+            <div class="premium-box">
+                <div class="premium-box__icon"><img src="assets/images/modals/modal-credits-coin.png" alt=""></div>
+                <h3>Go Premium!</h3>
+                <p>Unlock all features and find your perfect match faster.</p>
+                <a href="#upgrade-modal" data-open-modal="credits">Upgrade Now <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </aside>
+        <section class="dash-main">
+            <header class="edit-mobile-head">
+                <a href="profile.html" aria-label="Back to profile"><span aria-hidden="true">&#8249;</span></a>
+                <h1>Edit Profile</h1>
+            </header>
+            <header class="dash-topbar">
+                <div>
+                    <h1>Good Evening, <span>Alex</span></h1>
+                    <p>Ready to make meaningful connection?</p>
+                </div>
+                <div class="dash-actions">
+                    <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade Account</a>
+                    <a class="circle-action" href="messages.html"><i class="bi bi-chat-dots"></i></a>
+                    <a class="circle-action" href="notifications.html"><i class="bi bi-bell"></i></a>
+                    <div class="dash-user">
+                        <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex">
+                        <span>Alex John</span>
+                        <i class="bi bi-chevron-down"></i>
+                    </div>
+                </div>
+            </header>
+
+            <form class="edit-profile-form" id="editProfileForm" novalidate>
+                <div class="edit-profile-title-row">
+                    <div>
+                        <h2>Edit Profile</h2>
+                        <p>This is your personal information you can update anytime.</p>
+                    </div>
+                    <div class="edit-profile-actions">
+                        <a class="edit-btn edit-btn-outline" href="profile.html">CANCEL</a>
+                        <button class="edit-btn edit-btn-dark" type="submit">SAVE</button>
+                    </div>
+                </div>
+
+                <section class="edit-profile-card">
+                    <aside class="edit-photo-panel">
+                        <input type="file" id="mainAvatarInput" accept="image/*" hidden>
+                        <a class="my-profile-avatar edit-main-avatar" href="#" id="mainAvatarTrigger" aria-label="Upload profile picture">
+                            <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex" id="mainAvatarPreview">
+                            <span>Upload Pic</span>
+                        </a>
+                        <p>Update your photo and<br>personal details.</p>
+                    </aside>
+
+                    <div class="edit-fields-panel">
+                        <section class="edit-section edit-personal-info">
+                            <h3>PERSONAL INFORMATION</h3>
+                            <div class="edit-field">
+                                <label for="editName">Full Name <span>*</span></label>
+                                <input id="editName" type="text" value="Alex">
+                            </div>
+                            <div class="edit-field">
+                                <label>Date of birth <span>*</span></label>
+                                <div class="edit-date-grid">
+                                    <select class="js-velori-select" id="editMonth" aria-label="Birth month">
+                                        <option>Jan</option>
+                                        <option selected>Feb</option>
+                                        <option>Mar</option>
+                                        <option>Apr</option>
+                                    </select>
+                                    <select class="js-velori-select" id="editDay" aria-label="Birth day">
+                                        <option>4</option>
+                                        <option>5</option>
+                                        <option selected>6</option>
+                                        <option>7</option>
+                                    </select>
+                                    <select class="js-velori-select" id="editYear" aria-label="Birth year">
+                                        <option>2000</option>
+                                        <option>2001</option>
+                                        <option selected>2002</option>
+                                        <option>2003</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="edit-field">
+                                <label for="editBio">Bio <span>*</span></label>
+                                <textarea id="editBio">So long as you have food in your mouth, you have solved all questions for the time being.</textarea>
+                            </div>
+                        </section>
+
+                        <section class="edit-section">
+                            <h3>PERSONAL INTERESTS</h3>
+                            <p class="edit-question">What are you interested in?</p>
+                            <div class="edit-interest-row">
+                                <button type="button">Hiking <i class="bi bi-x"></i></button>
+                                <button type="button">Gaming <i class="bi bi-x"></i></button>
+                                <button type="button">Cooking <i class="bi bi-x"></i></button>
+                                <button type="button">Sports <i class="bi bi-x"></i></button>
+                                <button type="button">Technology <i class="bi bi-x"></i></button>
+                                <button type="button">Chess <i class="bi bi-x"></i></button>
+                                <button type="button">Comic <i class="bi bi-x"></i></button>
+                                <button type="button">Music <i class="bi bi-x"></i></button>
+                                <button class="add-interest" type="button"><i class="bi bi-plus-lg"></i> Add Interests</button>
+                            </div>
+                        </section>
+
+                        <section class="edit-section">
+                            <h3>PHOTOS</h3>
+                            <div class="edit-photo-grid">
+                                <div>
+                                    <article class="my-profile-photo">
+                                        <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex profile photo">
+                                        <span>Public</span>
+                                    </article>
+                                    <button class="delete-photo" type="button">DELETE</button>
+                                </div>
+                                <input type="file" id="extraPhotoInput" accept="image/*" multiple hidden>
+                                <button class="my-profile-add-photo" type="button" id="extraPhotoTrigger">
+                                    <i class="bi bi-card-image"></i>
+                                    <small><i class="bi bi-arrow-up-circle-fill"></i></small>
+                                    <span>Add more<br>photos</span>
+                                </button>
+                            </div>
+                        </section>
+
+                        <section class="edit-section edit-about-section">
+                            <h3>ABOUT</h3>
+                            <div class="edit-about-grid">
+                                <label>Live in:
+                                    <select class="js-velori-select"><option selected>Austin, Texas</option><option>New York, NY</option><option>Los Angeles, CA</option></select>
+                                </label>
+                                <label>Hometown:
+                                    <select class="js-velori-select"><option selected>Denver, Colorado</option><option>Austin, Texas</option><option>Miami, Florida</option></select>
+                                </label>
+                                <label>Relationship:
+                                    <select class="js-velori-select"><option selected>In a relationship</option><option>Single</option><option>It's complicated</option></select>
+                                </label>
+                                <label>Work as:
+                                    <select class="js-velori-select"><option selected>Graphic Designer</option><option>Product Designer</option><option>Photographer</option></select>
+                                </label>
+                                <label>Education:
+                                    <select class="js-velori-select"><option selected>Bachelor of Visual Arts</option><option>High School</option><option>Master's Degree</option></select>
+                                </label>
+                                <label>Languages:
+                                    <select class="js-velori-select"><option selected>English, Spanish</option><option>English</option><option>Spanish</option></select>
+                                </label>
+                                <label>Family plans:
+                                    <select class="js-velori-select"><option selected>Planning for kids</option><option>Want kids</option><option>Not sure yet</option></select>
+                                </label>
+                                <label>Smoke:
+                                    <select class="js-velori-select"><option selected>Rarely</option><option>Never</option><option>Socially</option></select>
+                                </label>
+                                <label>Drink:
+                                    <select class="js-velori-select"><option selected>Occasionally</option><option>Never</option><option>Socially</option></select>
+                                </label>
+                                <label>Marijuana:
+                                    <select class="js-velori-select"><option selected>Yes</option><option>No</option><option>Prefer not to say</option></select>
+                                </label>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <div class="edit-mobile-actions">
+                    <a class="edit-btn edit-btn-outline" href="profile.html">CANCEL</a>
+                    <button class="edit-btn edit-btn-dark" type="submit">SAVE</button>
+                </div>
+            </form>
+        </section>
+    </main>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

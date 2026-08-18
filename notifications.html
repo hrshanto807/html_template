@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velori - Notifications</title>
+    <link rel="stylesheet" href="assets/plugins/bootstrap-icons/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+<body class="dash-body notifications-body">
+    <main class="dashboard-shell">
+        <aside class="dash-sidebar" aria-label="Dashboard navigation">
+            <a class="dash-brand" href="index.html">
+                <img src="assets/images/icons/velori-logo.png" alt="Velori">
+            </a>
+            <nav class="dash-nav">
+                <span class="dash-nav__eyebrow">Main Menu</span>
+                <a href="dashboard.html"><i class="bi bi-grid"></i> Dashboard</a>
+                <a href="dashboard.html"><i class="bi bi-search"></i> Discover</a>
+                <a class="active" href="notifications.html"><i class="bi bi-heart"></i> Likes</a>
+                <a href="messages.html"><i class="bi bi-people"></i> Matches</a>
+                <a href="messages.html"><i class="bi bi-chat-dots"></i> Messages</a>
+                <span class="dash-nav__eyebrow">General</span>
+                <a href="settings.html"><i class="bi bi-gear"></i> Settings</a>
+                <a href="profile.html"><i class="bi bi-person"></i> Profile</a>
+            </nav>
+            <div class="premium-box">
+                <div class="premium-box__icon"><img src="assets/images/modals/modal-credits-coin.png" alt=""></div>
+                <h3>Go Premium!</h3>
+                <p>Unlock all features and find your perfect match faster.</p>
+                <a href="#upgrade-modal" data-open-modal="credits">Upgrade Now <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </aside>
+
+        <section class="dash-main">
+            <!-- Mobile Header for Notifications page (Figma Spec) -->
+            <header class="mobile-page-head">
+                <a class="mobile-back-btn" href="dashboard.html" aria-label="Back"><i class="bi bi-chevron-left"></i></a>
+                <h2>Notifications</h2>
+                <span style="width: 36px;"></span>
+            </header>
+
+            <header class="dash-topbar desktop-only-topbar">
+                <div>
+                    <h1>Notifications</h1>
+                    <p>Likes, matches, gifts, and profile activity.</p>
+                </div>
+                <div class="dash-actions">
+                    <a class="upgrade-pill" href="#upgrade-modal" data-open-modal="credits"><i class="bi bi-gem"></i> Upgrade Account</a>
+                    <a class="circle-action" href="messages.html" aria-label="Messages"><i class="bi bi-chat-dots"></i></a>
+                    <a class="circle-action" href="notifications.html" aria-label="Notifications"><i class="bi bi-bell"></i></a>
+                    
+                    <!-- Profile Dropdown Trigger & Menu -->
+                    <button class="dash-user" type="button">
+                        <img src="assets/images/avatars/avatar-alex.jpg" alt="Alex">
+                        <span>Alex John</span>
+                    </button>
+                </div>
+            </header>
+
+            <section class="notifications-page-card">
+                <div class="notifications-page-tabs">
+                    <button class="notif-tab-btn is-active" type="button" data-filter="all">All</button>
+                    <button class="notif-tab-btn" type="button" data-filter="unread">Unread</button>
+                </div>
+
+                <div class="notifications-page-list">
+                    <!-- Item 1: Alexandra -->
+                    <article class="notif-popup-item is-unread">
+                        <div class="notif-item-avatar">
+                            <img src="assets/images/profiles/profile-1.jpg" alt="Alexandra">
+                            <span class="notif-badge-icon purple"><i class="bi bi-chat-dots-fill"></i></span>
+                        </div>
+                        <div class="notif-item-content">
+                            <h5>Alexandra <small>2h ago</small></h5>
+                            <p>Sent you a message &bull; Hey, I really enjoyed our last chat! Would love to ca...</p>
+                        </div>
+                        <span class="notif-unread-dot"></span>
+                    </article>
+
+                    <!-- Item 2: Jordan -->
+                    <article class="notif-popup-item is-unread">
+                        <div class="notif-item-avatar">
+                            <img src="assets/images/profiles/profile-2.jpg" alt="Jordan">
+                            <span class="notif-badge-icon orange"><i class="bi bi-heart-fill"></i></span>
+                        </div>
+                        <div class="notif-item-content">
+                            <h5>Jordan liked your photo <small>3h ago</small></h5>
+                            <p>New match: Emily &bull; Prompt: Plan a weekend getaway</p>
+                        </div>
+                        <span class="notif-unread-dot"></span>
+                    </article>
+
+                    <!-- Item 3: Sam (Match with Action Buttons) -->
+                    <article class="notif-popup-item is-unread">
+                        <div class="notif-item-avatar">
+                            <img src="assets/images/profiles/profile-3.jpg" alt="Sam">
+                            <span class="notif-badge-icon green"><i class="bi bi-plus"></i></span>
+                        </div>
+                        <div class="notif-item-content">
+                            <h5>You have a new match! <small>30m ago</small></h5>
+                            <p>Sam sent you a wink</p>
+                            <div class="notif-item-actions">
+                                <button class="notif-action-btn ignore" type="button">Ignore</button>
+                                <button class="notif-action-btn reply" type="button">Reply</button>
+                            </div>
+                        </div>
+                        <span class="notif-unread-dot"></span>
+                    </article>
+
+                    <!-- Item 4: Maya -->
+                    <article class="notif-popup-item">
+                        <div class="notif-item-avatar">
+                            <img src="assets/images/profiles/profile-4.jpg" alt="Maya">
+                            <span class="notif-badge-icon"><i class="bi bi-heart-fill"></i></span>
+                        </div>
+                        <div class="notif-item-content">
+                            <h5>Maya <small>45m ago</small></h5>
+                            <p>Liked your profile</p>
+                        </div>
+                    </article>
+
+                    <!-- Item 5: New Message -->
+                    <article class="notif-popup-item">
+                        <div class="notif-item-avatar">
+                            <img src="assets/images/profiles/profile-5.jpg" alt="New Message">
+                            <span class="notif-badge-icon purple"><i class="bi bi-chat-dots-fill"></i></span>
+                        </div>
+                        <div class="notif-item-content">
+                            <h5>New message received <small>10m ago</small></h5>
+                            <p>Looking forward to our date this weekend! Let me kno...</p>
+                        </div>
+                    </article>
+
+                    <!-- Item 6: Sarah -->
+                    <article class="notif-popup-item is-unread">
+                        <div class="notif-item-avatar">
+                            <img src="assets/images/profiles/profile-6.jpg" alt="Sarah">
+                            <span class="notif-badge-icon orange"><i class="bi bi-chat-heart-fill"></i></span>
+                        </div>
+                        <div class="notif-item-content">
+                            <h5>Sarah commented on your post <small>1h ago</small></h5>
+                            <p>New match: Alex &bull; Prompt: Suggest a fun activity</p>
+                        </div>
+                        <span class="notif-unread-dot"></span>
+                    </article>
+
+                    <!-- Item 7: Michael -->
+                    <article class="notif-popup-item is-unread">
+                        <div class="notif-item-avatar">
+                            <img src="assets/images/profiles/profile-7.jpg" alt="Michael">
+                            <span class="notif-badge-icon orange"><i class="bi bi-share-fill"></i></span>
+                        </div>
+                        <div class="notif-item-content">
+                            <h5>Michael shared your story <small>2h ago</small></h5>
+                            <p>New match: Olivia &bull; Prompt: Recommend a good restaurant</p>
+                        </div>
+                        <span class="notif-unread-dot"></span>
+                    </article>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+
