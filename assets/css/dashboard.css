@@ -231,6 +231,8 @@ body.is-popup-scroll-locked {
     align-items: center;
     justify-content: space-between;
     gap: 24px;
+    position: relative;
+    z-index: 1500;
 }
 
 .dash-topbar h1 {
@@ -254,6 +256,8 @@ body.is-popup-scroll-locked {
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
+    z-index: 1300;
 }
 
 .upgrade-pill,
@@ -334,6 +338,8 @@ body.is-popup-scroll-locked {
     grid-template-columns: minmax(0, 1fr) 350px;
     gap: 28px;
     align-items: start;
+    position: relative;
+    z-index: 1;
 }
 
 .dash-section-title {
@@ -527,6 +533,8 @@ body.is-popup-scroll-locked {
     display: grid;
     gap: 17px;
     padding-top: 55px;
+    position: relative;
+    z-index: 1;
 }
 
 .mini-card {
@@ -5205,6 +5213,13 @@ body.is-popup-scroll-locked {
     padding: 4px 12px;
     border-radius: 50px;
     letter-spacing: 0.3px;
+    overflow: hidden;
+    max-width: calc(100% - 46px);
+    white-space: nowrap;
+}
+
+.pricing-tier-card.is-popular h4 {
+    padding-right: 112px;
 }
 
 .pricing-tier-card h4 {
@@ -5344,6 +5359,7 @@ body.is-popup-scroll-locked {
 /* 2. PROFILE DROPDOWN */
 .dash-user-wrapper {
     position: relative;
+    z-index: 1302;
 }
 
 .profile-dropdown-menu {
@@ -5356,7 +5372,7 @@ body.is-popup-scroll-locked {
     box-shadow: 0 18px 42px rgba(34, 24, 29, .12);
     border: 0;
     padding: 16px 0 12px;
-    z-index: 1100;
+    z-index: 1400;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
@@ -5459,19 +5475,20 @@ body.is-popup-scroll-locked {
 /* 3. NOTIFICATION POPUP PANEL */
 .notif-popup-wrapper {
     position: relative;
+    z-index: 1303;
 }
 
 .notif-popup-panel {
     position: absolute;
     top: calc(100% + 10px);
-    right: -160px;
+    right: 0;
     width: 403px;
     max-width: calc(100vw - 32px);
     background: #ffffff;
     border-radius: 14px;
     box-shadow: 0 18px 42px rgba(34, 24, 29, .12);
     border: 0;
-    z-index: 1100;
+    z-index: 1400;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
@@ -5817,13 +5834,17 @@ body.is-popup-scroll-locked {
 @media (max-width: 768px) {
     .modal-backdrop-custom {
         align-items: flex-start;
-        padding: 31px 12px;
+        height: 100dvh;
+        padding: 31px 12px max(31px, env(safe-area-inset-bottom));
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     .credits-modal-card {
         max-width: 406px;
-        max-height: none;
+        max-height: calc(100dvh - 62px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         border-radius: 22px;
     }
 
@@ -5984,5 +6005,504 @@ body.is-popup-scroll-locked {
         box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04) !important;
         min-height: 50px !important;
         margin: 10px 20px 20px !important;
+    }
+}
+
+/* Subtle project-wide dashboard micro animations */
+.dash-main,
+.dash-sidebar,
+.mobile-page-head,
+.settings-card,
+.edit-profile-card,
+.my-profile-card,
+.notifications-page-card,
+.service-hero,
+.terms-hero,
+.service-layout,
+.terms-layout,
+.messages-layout,
+.likes-main {
+    animation: veloriPageSoftIn .55s ease-out both;
+}
+
+.dash-topbar,
+.settings-title-row,
+.edit-profile-title-row,
+.dash-section-title {
+    animation: veloriSoftDrop .5s ease-out both;
+}
+
+.profile-card,
+.mini-card,
+.like-blur-card,
+.service-language-card,
+.service-contact-card,
+.service-faq-card,
+.terms-toc,
+.terms-content section,
+.settings-section,
+.edit-section,
+.notif-popup-item,
+.thread-item,
+.notice-item,
+.setting-row,
+.my-profile-photo,
+.my-profile-add-photo,
+.someone-profile-photos img {
+    animation: veloriCardIn .5s ease-out both;
+}
+
+.profile-card:nth-child(2),
+.mini-card:nth-child(2),
+.service-faq-card:nth-child(2),
+.terms-content section:nth-child(2),
+.settings-section:nth-child(2),
+.edit-section:nth-child(2) {
+    animation-delay: .06s;
+}
+
+.profile-card:nth-child(3),
+.mini-card:nth-child(3),
+.service-faq-card:nth-child(3),
+.terms-content section:nth-child(3),
+.settings-section:nth-child(3),
+.edit-section:nth-child(3) {
+    animation-delay: .1s;
+}
+
+.profile-card:nth-child(4),
+.service-faq-card:nth-child(4),
+.terms-content section:nth-child(4) {
+    animation-delay: .14s;
+}
+
+.profile-card,
+.mini-card,
+.service-faq-card,
+.service-language-card,
+.service-contact-card,
+.terms-toc,
+.settings-card,
+.edit-profile-card,
+.my-profile-card,
+.notifications-page-card,
+.like-blur-card {
+    transition: transform .26s ease, box-shadow .26s ease, border-color .26s ease, background-color .26s ease;
+}
+
+.service-faq-card:hover,
+.service-language-card:hover,
+.service-contact-card:hover,
+.terms-toc:hover,
+.like-blur-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 38px rgba(34, 24, 29, .08);
+}
+
+.dash-nav a:hover i,
+.dash-drawer-nav a:hover i,
+.mobile-bottom-nav a:hover i,
+.profile-dropdown-links a:hover i,
+.notif-action-btn:hover,
+.settings-password-toggle:hover i,
+.someone-photo-next:hover i,
+.my-profile-edit:hover span,
+.complete-btn:hover span,
+.likes-slider__next:hover i {
+    transform: translateX(2px);
+}
+
+.dash-nav a i,
+.dash-drawer-nav a i,
+.mobile-bottom-nav a i,
+.profile-dropdown-links a i,
+.settings-password-toggle i,
+.someone-photo-next i,
+.my-profile-edit span,
+.complete-btn span,
+.likes-slider__next i {
+    transition: transform .22s ease, color .22s ease;
+}
+
+.match-avatar:hover img,
+.dash-user:hover img,
+.my-profile-avatar:hover img,
+.edit-main-avatar:hover img,
+.likes-slider__track img:hover,
+.someone-profile-photos img:hover {
+    transform: scale(1.04);
+}
+
+.match-avatar img,
+.dash-user img,
+.my-profile-avatar img,
+.edit-main-avatar img,
+.likes-slider__track img,
+.someone-profile-photos img {
+    transition: transform .32s ease;
+}
+
+.settings-field input:focus,
+.settings-field select:focus,
+.edit-field input:focus,
+.edit-field select:focus,
+.edit-field textarea:focus,
+.service-search input:focus,
+.velori-select.is-open .velori-select__button {
+    box-shadow: 0 0 0 4px rgba(239, 41, 95, .1);
+}
+
+.settings-switch input:checked + span,
+.dark-checkbox input:checked,
+.settings-option-check input:checked + span {
+    animation: veloriTinyPop .2s ease-out;
+}
+
+.completeness-circle circle.progress {
+    animation: veloriProgressDraw 1s ease-out both;
+}
+
+.notif-unread-dot,
+.msg-status-icon {
+    animation: veloriPulseDot 1.8s ease-in-out infinite;
+}
+
+@keyframes veloriPageSoftIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes veloriSoftDrop {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes veloriCardIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes veloriTinyPop {
+    50% {
+        transform: scale(1.04);
+    }
+}
+
+@keyframes veloriProgressDraw {
+    from {
+        stroke-dashoffset: 220;
+    }
+}
+
+@keyframes veloriPulseDot {
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(239, 41, 95, .28);
+    }
+
+    50% {
+        box-shadow: 0 0 0 6px rgba(239, 41, 95, 0);
+    }
+}
+
+/* Dating-app micro effects */
+.profile-card__actions button {
+    position: relative;
+    overflow: visible;
+}
+
+.profile-card__actions button::after {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border-radius: inherit;
+    border: 1px solid rgba(239, 41, 95, .34);
+    opacity: 0;
+    transform: scale(.72);
+    pointer-events: none;
+}
+
+.profile-card__actions button.is-burst::after {
+    animation: veloriActionBurst .5s ease-out;
+}
+
+.profile-card__actions button.is-liked {
+    color: #ffffff;
+    background: var(--dash-primary);
+    animation: veloriHeartBeat .38s ease-out;
+}
+
+.profile-card__actions button.is-liked i {
+    color: #ffffff;
+}
+
+.profile-card:hover .tags span {
+    transform: translateY(-2px);
+}
+
+.profile-chip-row span,
+.my-profile-interests span {
+    transition: transform .24s ease, background-color .24s ease, color .24s ease, box-shadow .24s ease;
+}
+
+.profile-chip-row span:hover,
+.my-profile-interests span:hover {
+    transform: translateY(-2px);
+    color: var(--dash-primary);
+    background: rgba(239, 41, 95, .12);
+    box-shadow: 0 10px 20px rgba(239, 41, 95, .08);
+}
+
+.chat-row {
+    animation: veloriChatIn .32s ease-out both;
+}
+
+.chat-row.outgoing {
+    transform-origin: right bottom;
+}
+
+.chat-row.incoming {
+    transform-origin: left bottom;
+}
+
+.typing-indicator span {
+    animation: veloriTypingBounce .95s ease-in-out infinite;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: .24s;
+}
+
+.messages-compose button[type="submit"] i,
+.btn-chat-send i {
+    transition: transform .24s ease;
+}
+
+.messages-compose button[type="submit"]:hover i,
+.btn-chat-send:hover i {
+    transform: translate(2px, -2px) rotate(-8deg);
+}
+
+.messages-compose button[type="submit"]:active i,
+.btn-chat-send:active i {
+    animation: veloriSendFly .38s ease-out;
+}
+
+.pricing-tier-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing-tier-card:hover {
+    border-top-color: var(--dash-primary);
+    box-shadow: 0 16px 34px rgba(239, 41, 95, .12);
+}
+
+.pricing-tier-card:hover::after {
+    opacity: 1;
+}
+
+.pricing-tier-card::before,
+.popular-badge::after,
+.upgrade-pill::before,
+.modal-continue-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 42px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .55), transparent);
+    transform: translateX(-120%) skewX(-18deg);
+    pointer-events: none;
+}
+
+.pricing-tier-card::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px;
+    background: var(--dash-primary);
+    opacity: 0;
+    transition: opacity .24s ease;
+}
+
+.pricing-tier-card:hover::before,
+.popular-badge:hover::after,
+.pricing-tier-card.is-popular .popular-badge::after,
+.upgrade-pill:hover::before,
+.modal-continue-btn:hover::before {
+    animation: veloriShineSweep .75s ease-out;
+}
+
+.upgrade-pill,
+.modal-continue-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.verified-icon,
+i.bi-patch-check-fill {
+    animation: veloriVerifiedSpark .28s ease-out both;
+}
+
+@keyframes veloriActionBurst {
+    0% {
+        opacity: .7;
+        transform: scale(.72);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1.45);
+    }
+}
+
+@keyframes veloriHeartBeat {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    42% {
+        transform: scale(1.16);
+    }
+
+    68% {
+        transform: scale(.96);
+    }
+}
+
+@keyframes veloriChatIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px) scale(.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes veloriTypingBounce {
+    0%,
+    70%,
+    100% {
+        transform: translateY(0);
+        opacity: .45;
+    }
+
+    35% {
+        transform: translateY(-3px);
+        opacity: 1;
+    }
+}
+
+@keyframes veloriSendFly {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    55% {
+        transform: translate(7px, -7px) rotate(-14deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+}
+
+@keyframes veloriShineSweep {
+    from {
+        transform: translateX(-140%) skewX(-18deg);
+    }
+
+    to {
+        transform: translateX(340%) skewX(-18deg);
+    }
+}
+
+@keyframes veloriVerifiedSpark {
+    50% {
+        filter: drop-shadow(0 0 5px rgba(24, 119, 242, .38));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .dash-main,
+    .dash-sidebar,
+    .mobile-page-head,
+    .settings-card,
+    .edit-profile-card,
+    .my-profile-card,
+    .notifications-page-card,
+    .service-hero,
+    .terms-hero,
+    .service-layout,
+    .terms-layout,
+    .messages-layout,
+    .likes-main,
+    .dash-topbar,
+    .settings-title-row,
+    .edit-profile-title-row,
+    .dash-section-title,
+    .profile-card,
+    .mini-card,
+    .like-blur-card,
+    .service-language-card,
+    .service-contact-card,
+    .service-faq-card,
+    .terms-toc,
+    .terms-content section,
+    .settings-section,
+    .edit-section,
+    .notif-popup-item,
+    .thread-item,
+    .notice-item,
+    .setting-row,
+    .my-profile-photo,
+    .my-profile-add-photo,
+    .someone-profile-photos img,
+    .completeness-circle circle.progress,
+    .notif-unread-dot,
+    .msg-status-icon,
+    .profile-card__actions button.is-burst::after,
+    .profile-card__actions button.is-liked,
+    .chat-row,
+    .typing-indicator span,
+    .messages-compose button[type="submit"]:active i,
+    .btn-chat-send:active i,
+    .pricing-tier-card:hover::before,
+    .popular-badge:hover::after,
+    .upgrade-pill:hover::before,
+    .modal-continue-btn:hover::before,
+    .verified-icon,
+    i.bi-patch-check-fill {
+        animation: none !important;
     }
 }

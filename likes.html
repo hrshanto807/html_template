@@ -72,6 +72,11 @@
         object-fit: cover;
         filter: blur(10px);
         transform: scale(1.1);
+        transition: filter .3s ease, transform .3s ease;
+    }
+    .like-blur-card:hover img {
+        filter: blur(7px);
+        transform: scale(1.08);
     }
     .like-blur-info {
         position: absolute;
@@ -95,6 +100,61 @@
         justify-content: center;
         color: var(--primary-color);
         font-size: 14px;
+        position: relative;
+        transform-origin: center;
+        isolation: isolate;
+        overflow: visible;
+    }
+    .like-heart-icon::before,
+    .like-heart-icon::after {
+        content: "";
+        position: absolute;
+        inset: -1px;
+        border-radius: inherit;
+        background: rgba(239, 41, 95, 0.26);
+        z-index: 0;
+        animation: likeOuterPulse 1.25s ease-out infinite;
+    }
+    .like-heart-icon::after {
+        animation-delay: .35s;
+    }
+    .like-heart-icon i {
+        position: relative;
+        z-index: 2;
+    }
+    .like-blur-card:nth-child(2) .like-heart-icon::before,
+    .like-blur-card:nth-child(2) .like-heart-icon::after {
+        animation-delay: .18s;
+    }
+    .like-blur-card:nth-child(2) .like-heart-icon::after {
+        animation-delay: .53s;
+    }
+    .like-blur-card:nth-child(3) .like-heart-icon::before,
+    .like-blur-card:nth-child(3) .like-heart-icon::after {
+        animation-delay: .34s;
+    }
+    .like-blur-card:nth-child(3) .like-heart-icon::after {
+        animation-delay: .69s;
+    }
+    @keyframes likeOuterPulse {
+        0% {
+            opacity: .65;
+            transform: scale(1);
+        }
+        70% {
+            opacity: 0;
+            transform: scale(1.85);
+        }
+        100% {
+            opacity: 0;
+            transform: scale(1.85);
+        }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .like-heart-icon::before,
+        .like-heart-icon::after {
+            animation: none !important;
+        }
     }
     .upgrade-likes-banner {
         background: linear-gradient(180deg, rgba(255, 230, 238, 1) 0%, rgba(253, 240, 245, 1) 100%);
@@ -107,6 +167,7 @@
         color: var(--primary-color);
         font-size: 28px;
         margin-bottom: 12px;
+        animation: likesGemGlow 1.8s ease-in-out infinite;
     }
     .upgrade-likes-banner h2 {
         font-family: var(--font-display);
@@ -131,6 +192,45 @@
         width: 100%;
         max-width: 280px;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: transform .24s ease, box-shadow .24s ease;
+    }
+    .btn-upgrade-likes::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 42px;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .58), transparent);
+        transform: translateX(-120%) skewX(-18deg);
+    }
+    .btn-upgrade-likes:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 28px rgba(239, 41, 95, .28);
+    }
+    .btn-upgrade-likes:hover::before {
+        animation: likesButtonShine .75s ease-out;
+    }
+    @keyframes likesGemGlow {
+        0%, 100% {
+            transform: translateY(0);
+            filter: drop-shadow(0 0 0 rgba(239, 41, 95, 0));
+        }
+        50% {
+            transform: translateY(-2px);
+            filter: drop-shadow(0 7px 12px rgba(239, 41, 95, .22));
+        }
+    }
+    @keyframes likesButtonShine {
+        from { transform: translateX(-140%) skewX(-18deg); }
+        to { transform: translateX(380%) skewX(-18deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+        .upgrade-likes-banner .icon,
+        .btn-upgrade-likes:hover::before {
+            animation: none !important;
+        }
     }
     </style>
 </head>

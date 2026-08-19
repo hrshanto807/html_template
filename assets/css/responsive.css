@@ -13,6 +13,12 @@
 /* Medium Devices (Tablets, 991px and down) */
 
 @media (max-width: 1180px) {
+   .hero {
+      --intro-left-x: calc(7% + 16px);
+      --intro-right-x: calc(7% + 71px);
+      --intro-card-y: 209px;
+   }
+
    .nav-shell {
       gap: 20px;
    }
@@ -123,6 +129,10 @@
       display: flex;
       align-items: center;
       gap: 12px;
+   }
+
+   .nav-shell .nav-links a::after {
+      display: none;
    }
 
    .mobile-only-link {
@@ -253,6 +263,7 @@
 @media (max-width: 900px) {
    .hero {
       min-height: 840px;
+      --intro-card-y: 195px;
    }
 
    .hero__polaroids {
@@ -434,6 +445,45 @@
    .hero {
       min-height: 785px;
       overflow: hidden;
+      --intro-left-x: 36px;
+      --intro-right-x: 91px;
+      --intro-card-y: 249px;
+   }
+
+   .nav-shell {
+      width: calc(100% - 24px);
+      padding-left: 12px;
+      padding-right: 8px;
+      justify-content: space-between;
+   }
+
+   .nav-actions {
+      gap: 7px;
+      margin-left: 0;
+      flex-shrink: 0;
+   }
+
+   .nav-actions .btn--pink {
+      display: inline-flex;
+      min-width: 118px;
+      max-width: 118px;
+      min-height: 42px;
+      height: 42px;
+      padding: 0 20px;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      box-shadow: none;
+   }
+
+   .mobile-menu-button {
+      display: inline-flex;
+      width: 38px;
+      height: 38px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .12);
    }
 
    .hero__polaroids {

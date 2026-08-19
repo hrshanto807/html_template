@@ -88,6 +88,7 @@
         // 5. Mobile Menu Toggle
         $('.mobile-menu-button').on('click', function(e) {
             e.stopPropagation();
+            $(this).toggleClass('active');
             $('.nav-links').toggleClass('active');
             var $icon = $(this).find('i');
             if ($('.nav-links').hasClass('active')) {
@@ -95,6 +96,82 @@
             } else {
                 $icon.removeClass('bi-x-lg').addClass('bi-list');
             }
+        });
+
+        $(document).on('click', function(e) {
+            if (!$(e.target).closest('.nav-shell').length) {
+                $('.nav-links').removeClass('active');
+                $('.mobile-menu-button').removeClass('active').find('i').removeClass('bi-x-lg').addClass('bi-list');
+            }
+        });
+
+        var yearSpan = document.getElementById('currentYear');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+
+        // Landing lower sections reveal when they enter the viewport, not on page reload.
+        function initScrollReveals() {
+            var revealItems = document.querySelectorAll(
+                '.landing-page .process .section-title, ' +
+                '.landing-page .step-card, ' +
+                '.landing-page .process__cta, ' +
+                '.landing-page .story-banner__content, ' +
+                '.landing-page .footer__logo, ' +
+                '.landing-page .footer__bottom'
+            );
+
+            if (!revealItems.length) {
+                return;
+            }
+
+            revealItems.forEach(function (item) {
+                item.classList.add('reveal-on-scroll');
+            });
+
+            if (!('IntersectionObserver' in window)) {
+                revealItems.forEach(function (item) {
+                    item.classList.add('is-visible');
+                });
+                return;
+            }
+
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.22,
+                rootMargin: '0px 0px -8% 0px'
+            });
+
+            revealItems.forEach(function (item) {
+                observer.observe(item);
+            });
+        }
+
+        initScrollReveals();
+
+        // Dashboard card action feedback.
+        $(document).on('click', '.profile-card__actions button', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            var $btn = $(this);
+            $btn.removeClass('is-burst');
+            void this.offsetWidth;
+            $btn.addClass('is-burst');
+
+            if (($btn.attr('aria-label') || '').toLowerCase().indexOf('like') !== -1) {
+                $btn.toggleClass('is-liked');
+            }
+
+            setTimeout(function () {
+                $btn.removeClass('is-burst');
+            }, 520);
         });
 
         // 6. Shared dashboard overlays for pages that do not carry the markup inline.

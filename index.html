@@ -12,6 +12,10 @@
 <body class="landing-body">
     <main class="landing-page">
         <section class="hero" id="home">
+            <div class="hero__intro-banner" aria-hidden="true">
+                <img src="assets/images/landing/meet-story-1.png" alt="">
+                <img src="assets/images/landing/meet-story-2.png" alt="">
+            </div>
             <img class="hero__bg" src="assets/images/landing/hero-banner.png" alt="">
             <div class="hero__shade"></div>
 
@@ -151,46 +155,8 @@
             </div>
         </footer>
     </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var menuBtn = document.querySelector('.mobile-menu-button');
-            var navLinks = document.querySelector('.nav-links');
-            var navShell = document.querySelector('.nav-shell');
-
-            if (menuBtn && navLinks) {
-                menuBtn.addEventListener('click', function(e) {
-                    e.stopPropagation();
-                    navLinks.classList.toggle('active');
-                    menuBtn.classList.toggle('active');
-                    var icon = menuBtn.querySelector('i');
-                    if (navLinks.classList.contains('active')) {
-                        icon.classList.remove('bi-list');
-                        icon.classList.add('bi-x-lg');
-                    } else {
-                        icon.classList.remove('bi-x-lg');
-                        icon.classList.add('bi-list');
-                    }
-                });
-
-                document.addEventListener('click', function(e) {
-                    if (navShell && !navShell.contains(e.target)) {
-                        navLinks.classList.remove('active');
-                        menuBtn.classList.remove('active');
-                        var icon = menuBtn.querySelector('i');
-                        if (icon) {
-                            icon.classList.remove('bi-x-lg');
-                            icon.classList.add('bi-list');
-                        }
-                    }
-                });
-            }
-
-            var yearSpan = document.getElementById('currentYear');
-            if (yearSpan) {
-                yearSpan.textContent = new Date().getFullYear();
-            }
-        });
-    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
 

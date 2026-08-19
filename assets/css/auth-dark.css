@@ -629,3 +629,185 @@
    font-weight: 500;
    text-decoration: underline;
 }
+
+/* Auth page micro animations */
+.auth-art {
+   animation: authArtIn .65s ease-out both;
+}
+
+.auth-art__logo,
+.auth-art__copy {
+   animation: authCopyIn .58s ease-out both;
+}
+
+.auth-art__copy {
+   animation-delay: .12s;
+}
+
+.auth-panel {
+   animation: authPanelIn .6s ease-out both;
+}
+
+.dark-form .form-group,
+.photo-upload-container,
+.optional-divider,
+.auth-submit,
+.auth-switch {
+   animation: authFieldIn .45s ease-out both;
+}
+
+.dark-form .form-group:nth-child(2) {
+   animation-delay: .04s;
+}
+
+.dark-form .form-group:nth-child(3) {
+   animation-delay: .08s;
+}
+
+.dark-form .form-group:nth-child(4) {
+   animation-delay: .12s;
+}
+
+.dark-form .form-group:nth-child(5) {
+   animation-delay: .16s;
+}
+
+.photo-box,
+.pill-radio span,
+.dark-checkbox input,
+.add-btn,
+.password-toggle,
+.auth-submit {
+   transition: transform .24s ease, box-shadow .24s ease, border-color .24s ease, background-color .24s ease, color .24s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus,
+.form-group select:focus {
+   border-color: rgba(239, 41, 95, .82);
+   box-shadow: 0 0 0 4px rgba(239, 41, 95, .12), 0 10px 24px rgba(239, 41, 95, .08);
+}
+
+.photo-box:hover,
+.pill-radio span:hover,
+.add-btn:hover {
+   transform: translateY(-2px);
+}
+
+.photo-box:hover {
+   box-shadow: 0 14px 30px rgba(239, 41, 95, .14);
+   animation: authDashedBorder .8s linear infinite;
+}
+
+.photo-box.has-image img {
+   transition: transform .34s ease;
+}
+
+.photo-box.has-image:hover img {
+   transform: scale(1.04);
+}
+
+.auth-submit:hover,
+.auth-submit:focus-visible {
+   transform: translateY(-2px);
+   box-shadow: 0 16px 32px rgba(239, 41, 95, .3);
+}
+
+.dark-checkbox input:checked,
+.pill-radio input:checked + span {
+   animation: authTinyPop .2s ease-out;
+}
+
+@keyframes authArtIn {
+   from {
+      opacity: 0;
+      filter: saturate(.9);
+   }
+
+   to {
+      opacity: 1;
+      filter: saturate(1);
+   }
+}
+
+@keyframes authCopyIn {
+   from {
+      opacity: 0;
+      transform: translateY(12px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes authPanelIn {
+   from {
+      opacity: 0;
+      transform: translateX(12px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateX(0);
+   }
+}
+
+@keyframes authFieldIn {
+   from {
+      opacity: 0;
+      transform: translateY(8px);
+   }
+
+   to {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes authTinyPop {
+   50% {
+      transform: scale(1.04);
+   }
+}
+
+@keyframes authDashedBorder {
+   0% {
+      border-color: rgba(239, 41, 95, .35);
+   }
+
+   50% {
+      border-color: rgba(239, 41, 95, .9);
+   }
+
+   100% {
+      border-color: rgba(239, 41, 95, .35);
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .auth-art,
+   .auth-art__logo,
+   .auth-art__copy,
+   .auth-panel,
+   .dark-form .form-group,
+   .photo-upload-container,
+   .optional-divider,
+   .auth-submit,
+   .auth-switch,
+   .dark-checkbox input:checked,
+   .pill-radio input:checked + span,
+   .photo-box:hover {
+      animation: none !important;
+   }
+
+   .photo-box:hover,
+   .pill-radio span:hover,
+   .add-btn:hover,
+   .auth-submit:hover,
+   .auth-submit:focus-visible {
+      transform: none;
+   }
+}
