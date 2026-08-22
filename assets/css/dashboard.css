@@ -4050,6 +4050,7 @@ body.is-popup-scroll-locked {
 
 .settings-section-preferences {
    min-height: 214px;
+   z-index: 20;
 }
 
 .settings-section-notifications {
