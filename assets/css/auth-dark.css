@@ -58,9 +58,23 @@
 }
 
 .auth-art__logo,
+.auth-art__watermark,
 .auth-art__copy {
    position: relative;
    z-index: 2;
+}
+
+.auth-art__watermark {
+   position: absolute;
+   top: -3px;
+   right: -4px;
+   width: 190px;
+   height: 245px;
+   z-index: 3;
+   pointer-events: none;
+   background: linear-gradient(180deg, rgba(255, 255, 255, .42) 0%, rgba(239, 41, 95, .26) 100%);
+   mask: url('../images/favicon-alt.png') center / contain no-repeat;
+   -webkit-mask: url('../images/favicon-alt.png') center / contain no-repeat;
 }
 
 .auth-art__logo img {
@@ -544,6 +558,7 @@
 
    .auth-art::before,
    .auth-art::after,
+   .auth-art__watermark,
    .auth-art__copy {
       display: none;
    }
