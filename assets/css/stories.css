@@ -1,0 +1,515 @@
+/* ==========================================================================
+   STORIES PAGE - Hero Section & Community Stories
+   Exact styling matching design specification (Desktop & Mobile optimized)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Hero Section - Stories Page (Desktop & Tablet)
+   -------------------------------------------------------------------------- */
+.hero.hero--stories {
+    position: relative;
+    min-height: 800px;
+    min-height: max(800px, calc(100vw * (800 / 1440)));
+    display: flex;
+    align-items: center;
+    background-color: #121316;
+    overflow: hidden;
+    color: #ffffff;
+}
+
+.hero--stories .hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    z-index: 1;
+}
+
+.hero--stories .hero__bg-mobile {
+    display: none;
+}
+
+.hero--stories .hero__shade--stories {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: linear-gradient(
+        to right,
+        #121316 0%,
+        rgba(18, 19, 22, 0.96) 30%,
+        rgba(18, 19, 22, 0.75) 50%,
+        rgba(18, 19, 22, 0.25) 75%,
+        rgba(18, 19, 22, 0.05) 100%
+    );
+    pointer-events: none;
+}
+
+.stories-hero-container {
+    width: 100%;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 120px 24px 60px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.stories-hero-content {
+    max-width: 640px;
+    animation: landingCopyIn 750ms ease-out both;
+}
+
+/* Stories Hero Title */
+.stories-hero-title {
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.8rem, 5.2vw, 4.4rem);
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin: 0 0 22px 0;
+}
+
+.stories-hero-highlight {
+    color: #ef295f;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+/* Stories Hero Subtitle */
+.stories-hero-desc {
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: clamp(1rem, 1.35vw, 1.16rem);
+    color: #cfd2d8;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+}
+
+/* Stories Hero CTA Button */
+.stories-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.stories-hero-btn {
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+    min-height: 48px;
+    padding: 0 26px 0 6px;
+    border-radius: 100px;
+    background: #ef295f;
+    background: linear-gradient(135deg, #ef295f 0%, #e02456 100%);
+    color: #ffffff !important;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    gap: 12px;
+    border: none;
+    box-shadow: 0 10px 25px rgba(239, 41, 95, 0.38);
+    transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.stories-hero-btn:hover,
+.stories-hero-btn:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px rgba(239, 41, 95, 0.48);
+    filter: brightness(1.05);
+}
+
+.stories-hero-btn span {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.stories-hero-btn span i {
+    color: #ef295f;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+.stories-hero-btn:hover span {
+    animation: landingHeartBeat 0.42s ease-out;
+}
+
+/* --------------------------------------------------------------------------
+   Community Stories Section
+   -------------------------------------------------------------------------- */
+.stories-community-section {
+    background-color: #191919;
+    padding: 100px 24px 120px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.stories-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Header */
+.stories-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.stories-tag {
+    display: inline-block;
+    color: #ef295f;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.stories-title {
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.4rem, 4.5vw, 4rem);
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.15;
+    margin: 0 0 16px;
+    letter-spacing: -0.01em;
+}
+
+.stories-subtitle {
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: clamp(1rem, 1.4vw, 1.18rem);
+    color: #c5c5c9;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Grid */
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-top: 56px;
+}
+
+/* Card */
+.story-card {
+    background-color: #212121;
+    border-radius: 20px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: transform 0.35s cubic-bezier(0.2, 0, 0.2, 1), 
+                box-shadow 0.35s cubic-bezier(0.2, 0, 0.2, 1), 
+                border-color 0.35s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.28);
+    position: relative;
+}
+
+.story-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Card Image */
+.story-card__image-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 10.5;
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: #161616;
+}
+
+.story-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.story-card:hover .story-card__img {
+    transform: scale(1.04);
+}
+
+/* Card Body */
+.story-card__body {
+    padding: 16px 6px 8px 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Author Row */
+.story-card__author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.story-card__avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    flex-shrink: 0;
+}
+
+.story-card__name {
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+/* Story Quote / Caption */
+.story-card__quote {
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 14px;
+    color: #caced8;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+    line-height: 1.4;
+}
+
+/* Time */
+.story-card__time {
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 12.5px;
+    color: #767980;
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Large screens / small desktop */
+@media (max-width: 1260px) {
+    .stories-hero-container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+}
+
+/* Tablet (2 columns) */
+@media (max-width: 1100px) {
+    .hero--stories .hero__bg {
+        object-position: 80% center;
+    }
+
+    .stories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 820px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .stories-community-section {
+        padding: 80px 20px 95px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile Landscape / Small Tablet (<= 768px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .hero.hero--stories {
+        min-height: 100svh;
+        min-height: 640px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding-bottom: 20px;
+        position: relative;
+        overflow: hidden;
+        background-color: #121316;
+    }
+
+    .hero--stories .hero__bg {
+        display: none !important;
+    }
+
+    .hero--stories .hero__bg-mobile {
+        display: block !important;
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 65% 15% !important;
+        z-index: 1;
+    }
+
+    /* Seamless gradient: transparent over the couple kissing, solid dark behind text */
+    .hero--stories .hero__shade--stories {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        background: linear-gradient(
+            180deg,
+            rgba(18, 19, 22, 0.5) 0%,
+            rgba(18, 19, 22, 0.1) 16%,
+            rgba(18, 19, 22, 0.22) 36%,
+            rgba(18, 19, 22, 0.76) 56%,
+            rgba(18, 19, 22, 0.95) 78%,
+            #121316 100%
+        ) !important;
+        pointer-events: none;
+    }
+
+    .hero--stories .stories-hero-container {
+        position: relative;
+        z-index: 3;
+        width: 100%;
+        padding: 110px 20px 48px;
+        display: flex;
+        align-items: flex-end;
+        box-sizing: border-box;
+    }
+
+    .hero--stories .stories-hero-content {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .hero--stories .stories-hero-title {
+        font-size: clamp(2.1rem, 7.8vw, 2.9rem);
+        line-height: 1.18;
+        margin: 0 0 16px 0;
+        text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
+    }
+
+    .hero--stories .stories-hero-br {
+        display: none;
+    }
+
+    .hero--stories .stories-hero-desc {
+        font-size: clamp(0.96rem, 3.8vw, 1.08rem);
+        line-height: 1.55;
+        margin: 0 0 24px 0;
+        color: #e2e4ea;
+        text-shadow: 0 1px 8px rgba(0, 0, 0, 0.65);
+    }
+
+    .hero--stories .stories-hero-actions {
+        width: 100%;
+    }
+
+    .hero--stories .stories-hero-btn {
+        height: 48px;
+        min-height: 48px;
+        font-size: 13.5px;
+        padding: 0 24px 0 6px;
+        box-shadow: 0 8px 24px rgba(239, 41, 95, 0.45);
+    }
+
+    .stories-community-section {
+        padding: 70px 16px 85px;
+    }
+    
+    .stories-grid {
+        margin-top: 40px;
+        gap: 18px;
+    }
+
+    .stories-tag {
+        font-size: 12px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Small Mobile Portrait (<= 480px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 480px) {
+    .hero.hero--stories {
+        min-height: 100svh;
+        min-height: 590px;
+        padding-bottom: 12px;
+    }
+
+    .hero--stories .hero__bg-mobile {
+        object-position: 68% 12% !important;
+    }
+
+    .hero--stories .stories-hero-container {
+        padding: 100px 18px 38px;
+    }
+
+    .hero--stories .stories-hero-title {
+        font-size: clamp(1.85rem, 7.6vw, 2.35rem);
+        line-height: 1.2;
+        margin-bottom: 14px;
+    }
+
+    .hero--stories .stories-hero-desc {
+        font-size: 14.5px;
+        margin-bottom: 22px;
+    }
+
+    .hero--stories .stories-hero-btn {
+        height: 46px;
+        min-height: 46px;
+        font-size: 13px;
+        padding-right: 20px;
+    }
+
+    .hero--stories .stories-hero-btn span {
+        width: 34px;
+        height: 34px;
+    }
+
+    .stories-grid {
+        grid-template-columns: 1fr;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 20px;
+    }
+
+    .stories-community-section {
+        padding: 60px 16px 75px;
+    }
+
+    .story-card {
+        border-radius: 18px;
+        padding: 13px;
+    }
+
+    .story-card__image-wrap {
+        border-radius: 12px;
+    }
+}

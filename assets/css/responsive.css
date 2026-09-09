@@ -1,5 +1,5 @@
 /* ==========================================================================
-   VELORI - Responsive Breakpoints & Device Specific Styling (Desktop + Mobile)
+   ZOBEYA - Responsive Breakpoints & Device Specific Styling (Desktop + Mobile)
    ========================================================================== */
 
 /* Extra Large Devices (1200px and up) */
@@ -262,7 +262,7 @@
 
 @media (max-width: 900px) {
    .hero {
-      min-height: 840px;
+      min-height: 700px;
       --intro-card-y: 195px;
    }
 
@@ -271,13 +271,13 @@
    }
 
    .hero__copy {
-      top: 295px;
+      top: 275px;
    }
 
    .hero__intro {
       left: 7%;
       right: 7%;
-      top: 560px;
+      top: 455px;
       width: auto;
       max-width: 430px;
    }
@@ -346,8 +346,8 @@
       align-items: stretch;
    }
 
-   .hero-btn-group .btn-velori-primary,
-   .hero-btn-group .btn-velori-outline {
+   .hero-btn-group .btn-zobeya-primary,
+   .hero-btn-group .btn-zobeya-outline {
       width: 100%;
    }
 
@@ -443,7 +443,7 @@
 
 @media (max-width: 640px) {
    .hero {
-      min-height: 785px;
+      min-height: 610px;
       overflow: hidden;
       --intro-left-x: 36px;
       --intro-right-x: 91px;
@@ -486,9 +486,17 @@
       background: rgba(255, 255, 255, .12);
    }
 
+   .hero__br--desktop {
+      display: none !important;
+   }
+
+   .hero__br--mobile {
+      display: block !important;
+   }
+
    .hero__polaroids {
-      top: 224px;
-      left: 20px;
+      top: 190px;
+      left: 18px;
       width: 155px;
       height: 112px;
    }
@@ -500,53 +508,58 @@
    }
 
    .hero__watermark {
-      left: -67px;
-      bottom: 79px;
-      width: 225px;
-      opacity: .13;
+      display: none !important;
    }
 
    .hero__copy {
-      top: 352px;
-      left: 17px;
-      right: 14px;
+      position: absolute;
+      top: 310px;
+      left: 18px;
+      right: 18px;
+      width: auto;
    }
 
    .hero__copy h1 {
-      font-size: 46px;
-      line-height: 1.42;
+      font-size: clamp(30px, 7vw, 36px);
+      line-height: 1.24;
+      margin: 0;
    }
 
    .hero__intro {
-      top: 488px;
-      left: 17px;
-      right: 17px;
+      position: absolute;
+      top: 428px;
+      left: 18px;
+      right: 18px;
+      width: auto;
       max-width: none;
    }
 
    .hero__intro p {
-      margin-bottom: 20px;
-      font-size: 18px;
-      line-height: 26px;
+      margin: 0 0 16px;
+      font-size: 15px;
+      line-height: 1.45;
+      color: rgba(255, 255, 255, 0.9);
    }
 
    .hero__buttons {
+      display: flex;
       align-items: center;
       flex-direction: row;
       max-width: none;
-      gap: 13px;
+      gap: 12px;
       flex-wrap: nowrap;
    }
 
    .hero__buttons .btn {
-      height: 46px;
-      min-height: 46px;
-      padding: 0 24px;
+      height: 44px;
+      min-height: 44px;
+      padding: 0 20px;
+      font-size: 14px;
    }
 
    .hero__buttons .btn--icon {
-      padding-left: 5px;
-      padding-right: 22px;
+      padding-left: 6px;
+      padding-right: 18px;
    }
 
    .social-rail {
@@ -557,7 +570,7 @@
    }
 
    .process {
-      padding: 64px 24px 105px;
+      padding: 35px 24px 75px;
    }
 
    .section-title h2 {

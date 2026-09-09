@@ -1,4 +1,6 @@
-/* Dashboard redesign */
+/* ==========================================================================
+   DASHBOARD & DISCOVER PAGE START (dashboard.html)
+   ========================================================================== */
 .dash-body {
    --dash-bg: #fff7fa;
    --dash-ink: #212121;
@@ -848,7 +850,13 @@ body.is-popup-scroll-locked {
    font-size: 14px;
 }
 
-/* My Profile page */
+/* ==========================================================================
+   DASHBOARD & DISCOVER PAGE END
+   ========================================================================== */
+
+/* ==========================================================================
+   MY PROFILE PAGE START (profile.html)
+   ========================================================================== */
 .profile-body .dashboard-shell {
    width: min(100%, 1440px);
    max-width: 1440px;
@@ -1215,7 +1223,13 @@ body.is-popup-scroll-locked {
    font-weight: 700;
 }
 
-/* Someone's Profile page */
+/* ==========================================================================
+   MY PROFILE PAGE END
+   ========================================================================== */
+
+/* ==========================================================================
+   SOMEONE'S PROFILE PAGE START (someone-profile.html)
+   ========================================================================== */
 .someone-profile-card {
    min-height: 681px;
 }
@@ -1297,7 +1311,13 @@ body.is-popup-scroll-locked {
    padding-top: 0;
 }
 
-/* Edit Profile page */
+/* ==========================================================================
+   SOMEONE'S PROFILE PAGE END
+   ========================================================================== */
+
+/* ==========================================================================
+   EDIT PROFILE PAGE START (edit-profile.html)
+   ========================================================================== */
 .edit-profile-body .dashboard-shell {
    width: min(100%, 1440px);
    max-width: 1440px;
@@ -1496,13 +1516,15 @@ body.is-popup-scroll-locked {
    display: none;
 }
 
-.velori-select {
+.zobeya-select,
+.zobeya-select {
    width: 100%;
    min-width: 0;
    position: relative;
 }
 
-.velori-select select {
+.zobeya-select select,
+.zobeya-select select {
    position: absolute;
    inset: 0;
    width: 100%;
@@ -1511,7 +1533,8 @@ body.is-popup-scroll-locked {
    pointer-events: none;
 }
 
-.velori-select__button {
+.zobeya-select__button,
+.zobeya-select__button {
    width: 100%;
    min-height: 46px;
    padding: 0 42px 0 11px;
@@ -1529,7 +1552,8 @@ body.is-popup-scroll-locked {
    position: relative;
 }
 
-.velori-select__button::after {
+.zobeya-select__button::after,
+.zobeya-select__button::after {
    content: "";
    position: absolute;
    right: 14px;
@@ -1542,16 +1566,19 @@ body.is-popup-scroll-locked {
    transition: transform .2s ease;
 }
 
-.velori-select.is-open .velori-select__button {
+.zobeya-select.is-open .zobeya-select__button,
+.zobeya-select.is-open .zobeya-select__button {
    border-color: rgba(239, 41, 95, .42);
    box-shadow: 0 0 0 3px rgba(239, 41, 95, .08);
 }
 
-.velori-select.is-open .velori-select__button::after {
+.zobeya-select.is-open .zobeya-select__button::after,
+.zobeya-select.is-open .zobeya-select__button::after {
    transform: translateY(-25%) rotate(225deg);
 }
 
-.velori-select__menu {
+.zobeya-select__menu,
+.zobeya-select__menu {
    position: absolute;
    left: 0;
    right: 0;
@@ -1569,17 +1596,20 @@ body.is-popup-scroll-locked {
    -webkit-overflow-scrolling: touch;
 }
 
-.velori-select.is-up .velori-select__menu {
+.zobeya-select.is-up .zobeya-select__menu,
+.zobeya-select.is-up .zobeya-select__menu {
    top: auto;
    bottom: calc(100% + 7px);
 }
 
-.velori-select.is-open .velori-select__menu {
+.zobeya-select.is-open .zobeya-select__menu,
+.zobeya-select.is-open .zobeya-select__menu {
    display: grid;
    gap: 3px;
 }
 
-.velori-select__option {
+.zobeya-select__option,
+.zobeya-select__option {
    width: 100%;
    min-height: 36px;
    padding: 0 10px;
@@ -1593,8 +1623,10 @@ body.is-popup-scroll-locked {
    cursor: pointer;
 }
 
-.velori-select__option:hover,
-.velori-select__option.is-selected {
+.zobeya-select__option:hover,
+.zobeya-select__option.is-selected,
+.zobeya-select__option:hover,
+.zobeya-select__option.is-selected {
    color: #212121;
    background: #f8dfe8;
 }
@@ -1704,7 +1736,13 @@ body.is-popup-scroll-locked {
    display: none;
 }
 
-/* Messages page */
+/* ==========================================================================
+   EDIT PROFILE PAGE END
+   ========================================================================== */
+
+/* ==========================================================================
+   MESSAGES & CHAT PAGE START (messages.html)
+   ========================================================================== */
 .messages-shell {
    width: min(100%, 1396px);
 }
@@ -3929,7 +3967,13 @@ body.is-popup-scroll-locked {
    }
 }
 
-/* Settings page */
+/* ==========================================================================
+   MESSAGES & CHAT PAGE END
+   ========================================================================== */
+
+/* ==========================================================================
+   SETTINGS PAGE START (settings.html)
+   ========================================================================== */
 .settings-mobile-head {
    display: none;
 }
@@ -4092,7 +4136,8 @@ body.is-popup-scroll-locked {
 
 .settings-field input,
 .settings-field select,
-.settings-field .velori-select__button {
+.settings-field .zobeya-select__button,
+.settings-field .zobeya-select__button {
    width: 100%;
    min-height: 46px;
    border: 1px solid #dedcde;
@@ -4463,7 +4508,8 @@ body.is-popup-scroll-locked {
 
    .settings-field input,
    .settings-field select,
-   .settings-field .velori-select__button {
+   .settings-field .zobeya-select__button,
+   .settings-field .zobeya-select__button {
       min-height: 46px;
       font-size: 16px;
    }
@@ -4529,7 +4575,13 @@ body.is-popup-scroll-locked {
    }
 }
 
-/* Customer Service and Terms pages */
+/* ==========================================================================
+   SETTINGS PAGE END
+   ========================================================================== */
+
+/* ==========================================================================
+   CUSTOMER SERVICE & TERMS PAGES START (help.html & terms.html)
+   ========================================================================== */
 .service-mobile-head {
    display: none;
 }
@@ -5071,7 +5123,12 @@ body.is-popup-scroll-locked {
 }
 
 /* ==========================================================================
-   MODALS & POPUPS (Credits Modal, Profile Dropdown, Notification Popup)
+   CUSTOMER SERVICE & TERMS PAGES END
+   ========================================================================== */
+
+/* ==========================================================================
+   DASHBOARD MODALS & POPUPS START
+   (Credits Modal, Profile Dropdown, Notifications Panel)
    ========================================================================== */
 
 /* 1. CREDITS MODAL / UPGRADE ACCOUNT MODAL */
@@ -5737,7 +5794,13 @@ body.is-popup-scroll-locked {
    margin-top: 0;
 }
 
-/* 4. NOTIFICATIONS DEDICATED PAGE & MOBILE HEAD */
+/* ==========================================================================
+   DASHBOARD MODALS & POPUPS END
+   ========================================================================== */
+
+/* ==========================================================================
+   NOTIFICATIONS DEDICATED PAGE START (notifications.html)
+   ========================================================================== */
 .mobile-page-head {
    display: none;
    align-items: center;
@@ -6069,14 +6132,14 @@ body.is-popup-scroll-locked {
 .terms-layout,
 .messages-layout,
 .likes-main {
-   animation: veloriPageSoftIn .55s ease-out both;
+   animation: zobeyaPageSoftIn .55s ease-out both;
 }
 
 .dash-topbar,
 .settings-title-row,
 .edit-profile-title-row,
 .dash-section-title {
-   animation: veloriSoftDrop .5s ease-out both;
+   animation: zobeyaSoftDrop .5s ease-out both;
 }
 
 .profile-card,
@@ -6096,7 +6159,7 @@ body.is-popup-scroll-locked {
 .my-profile-photo,
 .my-profile-add-photo,
 .someone-profile-photos img {
-   animation: veloriCardIn .5s ease-out both;
+   animation: zobeyaCardIn .5s ease-out both;
 }
 
 .profile-card:nth-child(2),
@@ -6195,26 +6258,26 @@ body.is-popup-scroll-locked {
 .edit-field select:focus,
 .edit-field textarea:focus,
 .service-search input:focus,
-.velori-select.is-open .velori-select__button {
+.zobeya-select.is-open .zobeya-select__button {
    box-shadow: 0 0 0 4px rgba(239, 41, 95, .1);
 }
 
 .settings-switch input:checked+span,
 .dark-checkbox input:checked,
 .settings-option-check input:checked+span {
-   animation: veloriTinyPop .2s ease-out;
+   animation: zobeyaTinyPop .2s ease-out;
 }
 
 .completeness-circle circle.progress {
-   animation: veloriProgressDraw 1s ease-out both;
+   animation: zobeyaProgressDraw 1s ease-out both;
 }
 
 .notif-unread-dot,
 .msg-status-icon {
-   animation: veloriPulseDot 1.8s ease-in-out infinite;
+   animation: zobeyaPulseDot 1.8s ease-in-out infinite;
 }
 
-@keyframes veloriPageSoftIn {
+@keyframes zobeyaPageSoftIn {
    from {
       opacity: 0;
    }
@@ -6224,7 +6287,7 @@ body.is-popup-scroll-locked {
    }
 }
 
-@keyframes veloriSoftDrop {
+@keyframes zobeyaSoftDrop {
    from {
       opacity: 0;
       transform: translateY(-8px);
@@ -6236,7 +6299,7 @@ body.is-popup-scroll-locked {
    }
 }
 
-@keyframes veloriCardIn {
+@keyframes zobeyaCardIn {
    from {
       opacity: 0;
       transform: translateY(10px);
@@ -6248,19 +6311,19 @@ body.is-popup-scroll-locked {
    }
 }
 
-@keyframes veloriTinyPop {
+@keyframes zobeyaTinyPop {
    50% {
       transform: scale(1.04);
    }
 }
 
-@keyframes veloriProgressDraw {
+@keyframes zobeyaProgressDraw {
    from {
       stroke-dashoffset: 220;
    }
 }
 
-@keyframes veloriPulseDot {
+@keyframes zobeyaPulseDot {
 
    0%,
    100% {
@@ -6290,13 +6353,13 @@ body.is-popup-scroll-locked {
 }
 
 .profile-card__actions button.is-burst::after {
-   animation: veloriActionBurst .5s ease-out;
+   animation: zobeyaActionBurst .5s ease-out;
 }
 
 .profile-card__actions button.is-liked {
    color: #ffffff;
    background: var(--dash-primary);
-   animation: veloriHeartBeat .38s ease-out;
+   animation: zobeyaHeartBeat .38s ease-out;
 }
 
 .profile-card__actions button.is-liked i {
@@ -6321,7 +6384,7 @@ body.is-popup-scroll-locked {
 }
 
 .chat-row {
-   animation: veloriChatIn .32s ease-out both;
+   animation: zobeyaChatIn .32s ease-out both;
 }
 
 .chat-row.outgoing {
@@ -6333,7 +6396,7 @@ body.is-popup-scroll-locked {
 }
 
 .typing-indicator span {
-   animation: veloriTypingBounce .95s ease-in-out infinite;
+   animation: zobeyaTypingBounce .95s ease-in-out infinite;
 }
 
 .typing-indicator span:nth-child(2) {
@@ -6356,7 +6419,7 @@ body.is-popup-scroll-locked {
 
 .messages-compose button[type="submit"]:active i,
 .btn-chat-send:active i {
-   animation: veloriSendFly .38s ease-out;
+   animation: zobeyaSendFly .38s ease-out;
 }
 
 .pricing-tier-card {
@@ -6404,7 +6467,7 @@ body.is-popup-scroll-locked {
 .pricing-tier-card.is-popular .popular-badge::after,
 .upgrade-pill:hover::before,
 .modal-continue-btn:hover::before {
-   animation: veloriShineSweep .75s ease-out;
+   animation: zobeyaShineSweep .75s ease-out;
 }
 
 .upgrade-pill,
@@ -6415,10 +6478,10 @@ body.is-popup-scroll-locked {
 
 .verified-icon,
 i.bi-patch-check-fill {
-   animation: veloriVerifiedSpark .28s ease-out both;
+   animation: zobeyaVerifiedSpark .28s ease-out both;
 }
 
-@keyframes veloriActionBurst {
+@keyframes zobeyaActionBurst {
    0% {
       opacity: .7;
       transform: scale(.72);
@@ -6430,7 +6493,7 @@ i.bi-patch-check-fill {
    }
 }
 
-@keyframes veloriHeartBeat {
+@keyframes zobeyaHeartBeat {
 
    0%,
    100% {
@@ -6446,7 +6509,7 @@ i.bi-patch-check-fill {
    }
 }
 
-@keyframes veloriChatIn {
+@keyframes zobeyaChatIn {
    from {
       opacity: 0;
       transform: translateY(8px) scale(.98);
@@ -6458,7 +6521,7 @@ i.bi-patch-check-fill {
    }
 }
 
-@keyframes veloriTypingBounce {
+@keyframes zobeyaTypingBounce {
 
    0%,
    70%,
@@ -6473,7 +6536,7 @@ i.bi-patch-check-fill {
    }
 }
 
-@keyframes veloriSendFly {
+@keyframes zobeyaSendFly {
    0% {
       transform: translate(0, 0) rotate(0deg);
    }
@@ -6487,7 +6550,7 @@ i.bi-patch-check-fill {
    }
 }
 
-@keyframes veloriShineSweep {
+@keyframes zobeyaShineSweep {
    from {
       transform: translateX(-140%) skewX(-18deg);
    }
@@ -6497,7 +6560,7 @@ i.bi-patch-check-fill {
    }
 }
 
-@keyframes veloriVerifiedSpark {
+@keyframes zobeyaVerifiedSpark {
    50% {
       filter: drop-shadow(0 0 5px rgba(24, 119, 242, .38));
    }
@@ -6557,3 +6620,275 @@ i.bi-patch-check-fill {
       animation: none !important;
    }
 }
+
+/* ==========================================================================
+   NOTIFICATIONS DEDICATED PAGE END
+   ========================================================================== */
+
+/* ==========================================================================
+   LIKES PAGE START (likes.html)
+   ========================================================================== */
+
+.likes-page-header {
+   padding: 0 0 20px;
+}
+
+.likes-page-header h1 {
+   font-family: var(--font-display, var(--font-heading));
+   font-size: 42px;
+   margin: 0;
+   display: flex;
+   align-items: center;
+   gap: 12px;
+}
+
+.likes-page-header .badge {
+   background-color: var(--primary-color);
+   color: white;
+   font-size: 18px;
+   font-family: var(--font-body);
+   font-weight: 600;
+   width: 32px;
+   height: 32px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 8px;
+}
+
+.likes-page-header p {
+   color: var(--dash-muted);
+   margin: 8px 0 0;
+   font-size: 16px;
+}
+
+.likes-page-grid {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 18px 12px;
+   margin: 0 0 24px;
+}
+
+.like-blur-card {
+   position: relative;
+   border-radius: 12px;
+   overflow: hidden;
+   aspect-ratio: 3 / 4;
+   background-color: #ddd;
+}
+
+.like-blur-card img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   filter: blur(10px);
+   transform: scale(1.1);
+   transition: filter .3s ease, transform .3s ease;
+}
+
+.like-blur-card:hover img {
+   filter: blur(7px);
+   transform: scale(1.08);
+}
+
+.like-blur-info {
+   position: absolute;
+   bottom: 12px;
+   left: 12px;
+   right: 12px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: white;
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.like-heart-icon {
+   width: 28px;
+   height: 28px;
+   background-color: rgba(239, 41, 95, 0.2);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--primary-color);
+   font-size: 14px;
+   position: relative;
+   transform-origin: center;
+   isolation: isolate;
+   overflow: visible;
+}
+
+.like-heart-icon::before,
+.like-heart-icon::after {
+   content: "";
+   position: absolute;
+   inset: -1px;
+   border-radius: inherit;
+   background: rgba(239, 41, 95, 0.26);
+   z-index: 0;
+   animation: likeOuterPulse 1.25s ease-out infinite;
+}
+
+.like-heart-icon::after {
+   animation-delay: .35s;
+}
+
+.like-heart-icon i {
+   position: relative;
+   z-index: 2;
+}
+
+.like-blur-card:nth-child(2) .like-heart-icon::before,
+.like-blur-card:nth-child(2) .like-heart-icon::after {
+   animation-delay: .18s;
+}
+
+.like-blur-card:nth-child(2) .like-heart-icon::after {
+   animation-delay: .53s;
+}
+
+.like-blur-card:nth-child(3) .like-heart-icon::before,
+.like-blur-card:nth-child(3) .like-heart-icon::after {
+   animation-delay: .34s;
+}
+
+.like-blur-card:nth-child(3) .like-heart-icon::after {
+   animation-delay: .69s;
+}
+
+@keyframes likeOuterPulse {
+   0% {
+      opacity: .65;
+      transform: scale(1);
+   }
+
+   70% {
+      opacity: 0;
+      transform: scale(1.85);
+   }
+
+   100% {
+      opacity: 0;
+      transform: scale(1.85);
+   }
+}
+
+.upgrade-likes-banner {
+   background: linear-gradient(180deg, rgba(255, 230, 238, 1) 0%, rgba(253, 240, 245, 1) 100%);
+   border-radius: 16px;
+   padding: 30px 24px;
+   text-align: center;
+   margin: 0;
+}
+
+.upgrade-likes-banner .icon {
+   color: var(--primary-color);
+   font-size: 28px;
+   margin-bottom: 12px;
+   animation: likesGemGlow 1.8s ease-in-out infinite;
+}
+
+.upgrade-likes-banner h2 {
+   font-family: var(--font-display, var(--font-heading));
+   font-size: 28px;
+   margin-bottom: 10px;
+   color: var(--dash-ink);
+   font-weight: 400;
+}
+
+.upgrade-likes-banner p {
+   color: var(--dash-muted);
+   font-size: 14px;
+   margin-bottom: 20px;
+}
+
+.btn-upgrade-likes {
+   background-color: var(--primary-color);
+   color: white;
+   border: none;
+   border-radius: 24px;
+   padding: 14px 24px;
+   font-size: 16px;
+   font-weight: 500;
+   width: 100%;
+   max-width: 280px;
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;
+   transition: transform .24s ease, box-shadow .24s ease;
+}
+
+.btn-upgrade-likes::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   width: 42px;
+   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .58), transparent);
+   transform: translateX(-120%) skewX(-18deg);
+}
+
+.btn-upgrade-likes:hover {
+   transform: translateY(-2px);
+   box-shadow: 0 14px 28px rgba(239, 41, 95, .28);
+}
+
+.btn-upgrade-likes:hover::before {
+   animation: likesButtonShine .75s ease-out;
+}
+
+@keyframes likesGemGlow {
+
+   0%,
+   100% {
+      transform: translateY(0);
+      filter: drop-shadow(0 0 0 rgba(239, 41, 95, 0));
+   }
+
+   50% {
+      transform: translateY(-2px);
+      filter: drop-shadow(0 7px 12px rgba(239, 41, 95, .22));
+   }
+}
+
+@keyframes likesButtonShine {
+   from {
+      transform: translateX(-140%) skewX(-18deg);
+   }
+
+   to {
+      transform: translateX(380%) skewX(-18deg);
+   }
+}
+
+@media (max-width: 991px) {
+   .likes-page-header {
+      padding: 10px 20px 20px;
+   }
+
+   .likes-page-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin: 0 20px 24px;
+   }
+
+   .upgrade-likes-banner {
+      margin: 20px !important;
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+   .like-heart-icon::before,
+   .like-heart-icon::after,
+   .upgrade-likes-banner .icon,
+   .btn-upgrade-likes:hover::before {
+      animation: none !important;
+   }
+}
+
+/* ==========================================================================
+   LIKES PAGE END
+   ========================================================================== */

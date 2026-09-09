@@ -1,11 +1,11 @@
 /**
- * VELORI - Main jQuery Scripts & Interactivity
+ * ZOBEYA - Main jQuery Scripts & Interactivity
  */
 (function ($) {
     "use strict";
 
     $(document).ready(function () {
-        console.log("Velori Application Initialized with Local jQuery 3.7.1.");
+        console.log("Zobeya Application Initialized with Local jQuery 3.7.1.");
 
         // 1. Sticky / Scrolled Header Animation
         $(window).on("scroll", function () {
@@ -515,13 +515,13 @@
             window.location.href = 'someone-profile.html';
         }, true);
 
-        // 13. Global Velori custom select dropdowns
-        function closeVeloriSelects(except) {
-            document.querySelectorAll('.velori-select.is-open').forEach(function (wrap) {
+        // 13. Global Zobeya custom select dropdowns
+        function closeZobeyaSelects(except) {
+            document.querySelectorAll('.zobeya-select.is-open').forEach(function (wrap) {
                 if (wrap !== except) {
                     wrap.classList.remove('is-open');
                     wrap.classList.remove('is-up');
-                    var button = wrap.querySelector('.velori-select__button');
+                    var button = wrap.querySelector('.zobeya-select__button');
                     if (button) {
                         button.setAttribute('aria-expanded', 'false');
                     }
@@ -529,9 +529,9 @@
             });
         }
 
-        function setVeloriSelectDirection(wrapper) {
-            var button = wrapper.querySelector('.velori-select__button');
-            var menu = wrapper.querySelector('.velori-select__menu');
+        function setZobeyaSelectDirection(wrapper) {
+            var button = wrapper.querySelector('.zobeya-select__button');
+            var menu = wrapper.querySelector('.zobeya-select__menu');
 
             if (!button || !menu) {
                 return;
@@ -548,12 +548,12 @@
             }
         }
 
-        function initVeloriSelects(scope) {
+        function initZobeyaSelects(scope) {
             var root = scope || document;
-            var selects = root.querySelectorAll('select.js-velori-select');
+            var selects = root.querySelectorAll('select.js-zobeya-select');
 
             selects.forEach(function (select) {
-                if (select.dataset.veloriSelectReady === 'true' || select.closest('.velori-select')) {
+                if (select.dataset.zobeyaSelectReady === 'true' || select.closest('.zobeya-select')) {
                     return;
                 }
 
@@ -561,18 +561,18 @@
                 var button = document.createElement('button');
                 var menu = document.createElement('div');
                 var selectedOption = select.options[select.selectedIndex] || select.options[0];
-                var menuId = 'velori-select-menu-' + Math.random().toString(36).slice(2);
+                var menuId = 'zobeya-select-menu-' + Math.random().toString(36).slice(2);
 
-                select.dataset.veloriSelectReady = 'true';
-                wrapper.className = 'velori-select';
-                button.className = 'velori-select__button';
+                select.dataset.zobeyaSelectReady = 'true';
+                wrapper.className = 'zobeya-select';
+                button.className = 'zobeya-select__button';
                 button.type = 'button';
                 button.setAttribute('aria-haspopup', 'listbox');
                 button.setAttribute('aria-expanded', 'false');
                 button.setAttribute('aria-controls', menuId);
                 button.textContent = selectedOption ? selectedOption.textContent : '';
 
-                menu.className = 'velori-select__menu';
+                menu.className = 'zobeya-select__menu';
                 menu.id = menuId;
                 menu.setAttribute('role', 'listbox');
 
@@ -582,7 +582,7 @@
                     }
 
                     var item = document.createElement('button');
-                    item.className = 'velori-select__option';
+                    item.className = 'zobeya-select__option';
                     item.type = 'button';
                     item.setAttribute('role', 'option');
                     item.textContent = option.textContent;
@@ -597,7 +597,7 @@
                     item.addEventListener('click', function () {
                         select.value = option.value;
                         button.textContent = option.textContent;
-                        menu.querySelectorAll('.velori-select__option').forEach(function (choice) {
+                        menu.querySelectorAll('.zobeya-select__option').forEach(function (choice) {
                             choice.classList.remove('is-selected');
                             choice.setAttribute('aria-selected', 'false');
                         });
@@ -619,9 +619,9 @@
 
                 button.addEventListener('click', function () {
                     var isOpen = wrapper.classList.toggle('is-open');
-                    closeVeloriSelects(wrapper);
+                    closeZobeyaSelects(wrapper);
                     if (isOpen) {
-                        setVeloriSelectDirection(wrapper);
+                        setZobeyaSelectDirection(wrapper);
                     } else {
                         wrapper.classList.remove('is-up');
                     }
@@ -630,27 +630,27 @@
             });
         }
 
-        initVeloriSelects();
+        initZobeyaSelects();
 
-        window.initVeloriSelects = initVeloriSelects;
+        window.initZobeyaSelects = initZobeyaSelects;
 
         window.addEventListener('scroll', function () {
-            document.querySelectorAll('.velori-select.is-open').forEach(setVeloriSelectDirection);
+            document.querySelectorAll('.zobeya-select.is-open').forEach(setZobeyaSelectDirection);
         }, true);
 
         window.addEventListener('resize', function () {
-            document.querySelectorAll('.velori-select.is-open').forEach(setVeloriSelectDirection);
+            document.querySelectorAll('.zobeya-select.is-open').forEach(setZobeyaSelectDirection);
         });
 
         document.addEventListener('click', function (event) {
-            if (!event.target.closest('.velori-select')) {
-                closeVeloriSelects();
+            if (!event.target.closest('.zobeya-select')) {
+                closeZobeyaSelects();
             }
         });
 
         document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape') {
-                closeVeloriSelects();
+                closeZobeyaSelects();
                 closeCreditsModal();
                 closeFloatingPopups();
             }

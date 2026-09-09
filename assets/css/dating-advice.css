@@ -1,0 +1,777 @@
+/* ==========================================================================
+   DATING ADVICE PAGE - Timeline & Step Process
+   Flat dark design matching Zobeya / Zobeya aesthetics
+   ========================================================================== */
+
+/* Page Base */
+.advice-page {
+    background-color: #141518;
+    color: #ffffff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* Nav wrapper spacing for absolute nav-shell */
+.advice-nav-wrapper {
+    position: relative;
+    width: 100%;
+    height: 120px;
+}
+
+/* Advice Hero / Header Section */
+.advice-header-section {
+    padding: 30px 24px 70px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    background-color: #141518;
+}
+
+.advice-header-container {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.advice-tag {
+    display: inline-block;
+    color: #ef295f;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.advice-main-title {
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.6rem, 5vw, 4.2rem);
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+    margin: 0 0 18px;
+}
+
+.advice-main-title .text-pink {
+    color: #ef295f;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+.advice-lead-text {
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: clamp(1rem, 1.35vw, 1.15rem);
+    color: #a7abb4;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Timeline Section
+   -------------------------------------------------------------------------- */
+.advice-timeline-section {
+    padding: 20px 24px 100px;
+    background-color: #141518;
+    position: relative;
+    z-index: 2;
+}
+
+.advice-timeline-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Central Vertical Stem / Line */
+.advice-timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    bottom: 40px;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(180deg,
+            rgba(239, 41, 95, 0.7) 0%,
+            rgba(239, 41, 95, 0.3) 50%,
+            rgba(255, 255, 255, 0.12) 100%);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+/* Timeline Item (Step Row) */
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+/* Center Node Dot */
+.timeline-node {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #ef295f;
+    border: 3px solid #141518;
+    box-shadow: 0 0 16px rgba(239, 41, 95, 0.75);
+    z-index: 3;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item:hover .timeline-node {
+    transform: translate(-50%, -50%) scale(1.3);
+    box-shadow: 0 0 24px rgba(239, 41, 95, 0.95);
+}
+
+/* Horizontal Connector Line */
+.timeline-connector {
+    position: absolute;
+    top: 50%;
+    height: 2px;
+    background: rgba(239, 41, 95, 0.35);
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.timeline-item:hover .timeline-connector {
+    background: #ef295f;
+}
+
+/* Left Card Alignment (Odd items: 01, 03, 05) */
+.timeline-item--left {
+    justify-content: flex-start;
+}
+
+.timeline-item--left .timeline-card {
+    margin-right: auto;
+}
+
+.timeline-item--left .timeline-connector {
+    right: 50%;
+    width: 48px;
+}
+
+/* Right Card Alignment (Even items: 02, 04) */
+.timeline-item--right {
+    justify-content: flex-end;
+}
+
+.timeline-item--right .timeline-card {
+    margin-left: auto;
+}
+
+.timeline-item--right .timeline-connector {
+    left: 50%;
+    width: 48px;
+}
+
+/* Timeline Card */
+.timeline-card {
+    width: calc(50% - 48px);
+    background-color: #1d1f24;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    padding: 38px 36px 36px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(239, 41, 95, 0.35);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.45), 0 0 20px rgba(239, 41, 95, 0.15);
+}
+
+/* Big Number */
+.timeline-number {
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.timeline-card:hover .timeline-number {
+    color: #ef295f;
+}
+
+/* Step Title */
+.timeline-title {
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.25;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+}
+
+/* Step Description */
+.timeline-desc {
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 15px;
+    color: #b0b4be;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* Card Bottom Tag */
+.timeline-pill {
+    display: inline-block;
+    margin-top: 20px;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 11.5px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ef295f;
+    background: rgba(239, 41, 95, 0.09);
+    padding: 5px 13px;
+    border-radius: 50px;
+    border: 1px solid rgba(239, 41, 95, 0.2);
+}
+
+/* --------------------------------------------------------------------------
+   Bottom CTA Banner
+   -------------------------------------------------------------------------- */
+.advice-cta-section {
+    background-color: #141518;
+    padding: 0 24px 100px;
+    position: relative;
+    z-index: 2;
+}
+
+.advice-cta-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #1e2026 0%, #252830 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 50px 36px;
+    text-align: center;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35);
+}
+
+.advice-cta-title {
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    color: #ffffff;
+    font-weight: 400;
+    margin: 0 0 14px;
+}
+
+.advice-cta-desc {
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 16px;
+    color: #b4b8c2;
+    margin: 0 auto 30px;
+    max-width: 560px;
+    line-height: 1.6;
+}
+
+.advice-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    padding: 0 32px 0 8px;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #ef295f 0%, #d41f51 100%);
+    color: #ffffff !important;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 14.5px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    gap: 12px;
+    border: none;
+    box-shadow: 0 10px 28px rgba(239, 41, 95, 0.4);
+    text-decoration: none;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+}
+
+.advice-cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 36px rgba(239, 41, 95, 0.55);
+    filter: brightness(1.05);
+}
+
+.advice-cta-btn span {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.advice-cta-btn span i {
+    color: #ef295f;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+/* Tablet (collapse center line to left side) */
+@media (max-width: 860px) {
+    .advice-nav-wrapper {
+        height: 100px;
+    }
+
+    .advice-header-section {
+        padding: 20px 20px 50px;
+    }
+
+    /* Move line to left */
+    .advice-timeline-container::before {
+        left: 20px;
+        transform: none;
+    }
+
+    /* Shift all cards to the right */
+    .timeline-item {
+        justify-content: flex-start !important;
+        margin-bottom: 36px;
+    }
+
+    .timeline-node {
+        left: 20px !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .timeline-item:hover .timeline-node {
+        transform: translate(-50%, -50%) scale(1.25) !important;
+    }
+
+    .timeline-connector {
+        left: 20px !important;
+        right: auto !important;
+        width: 36px !important;
+    }
+
+    .timeline-card {
+        width: calc(100% - 56px) !important;
+        margin-left: 56px !important;
+        margin-right: 0 !important;
+        padding: 30px 26px;
+    }
+
+    .timeline-number {
+        font-size: 46px;
+        margin-bottom: 12px;
+    }
+
+    .timeline-title {
+        font-size: 23px;
+        margin-bottom: 10px;
+    }
+
+    .timeline-desc {
+        font-size: 14.5px;
+    }
+}
+
+/* Mobile Portrait (<= 580px) */
+@media (max-width: 580px) {
+    .advice-nav-wrapper {
+        height: 90px;
+    }
+
+    .advice-header-section {
+        padding: 15px 16px 40px;
+    }
+
+    .advice-tag {
+        font-size: 11.5px;
+        letter-spacing: 2px;
+        margin-bottom: 12px;
+    }
+
+    .advice-timeline-container::before {
+        left: 14px;
+    }
+
+    .timeline-node {
+        left: 14px !important;
+        width: 14px;
+        height: 14px;
+    }
+
+    .timeline-connector {
+        left: 14px !important;
+        width: 26px !important;
+    }
+
+    .timeline-card {
+        width: calc(100% - 40px) !important;
+        margin-left: 40px !important;
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    .timeline-number {
+        font-size: 38px;
+        margin-bottom: 10px;
+    }
+
+    .timeline-title {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .timeline-desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .advice-cta-card {
+        padding: 36px 20px;
+        border-radius: 20px;
+    }
+
+    .advice-cta-btn {
+        height: 46px;
+        font-size: 13.5px;
+        padding: 0 24px 0 6px;
+    }
+
+    .advice-cta-btn span {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Frequently Asked Questions Section
+   -------------------------------------------------------------------------- */
+.advice-faq-section {
+    background-color: #141518;
+    padding: 30px 24px 90px;
+    position: relative;
+    z-index: 2;
+}
+
+.advice-faq-container {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.advice-faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.advice-faq-title {
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.18;
+    margin: 0 0 14px;
+    letter-spacing: -0.015em;
+}
+
+.advice-faq-subtitle {
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: clamp(0.98rem, 1.3vw, 1.12rem);
+    color: #a4a8b2;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.advice-faq-group {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.advice-faq-category {
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #ffffff;
+    margin: 0 0 20px;
+    letter-spacing: -0.01em;
+}
+
+/* Accordion */
+.faq-accordion {
+    width: 100%;
+}
+
+.faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    transition: border-color 0.3s ease;
+}
+
+.faq-item:first-child {
+    border-top: 1px solid rgba(255, 255, 255, 0.09);
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    padding: 22px 2px;
+    text-align: left;
+    cursor: pointer;
+    gap: 20px;
+    color: #f1f2f5;
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.35;
+    transition: color 0.25s ease;
+}
+
+.faq-question:hover {
+    color: #ef295f;
+}
+
+.faq-item.active .faq-question {
+    color: #ef295f;
+}
+
+.faq-icon {
+    font-size: 16px;
+    color: #8b8f9a;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.25s ease;
+    flex-shrink: 0;
+}
+
+.faq-question:hover .faq-icon {
+    color: #ef295f;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+    color: #ef295f;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.38s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 350px;
+    opacity: 1;
+}
+
+.faq-answer-inner {
+    padding: 0 2px 24px;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 15px;
+    color: #b0b4be;
+    line-height: 1.7;
+}
+
+@media (max-width: 640px) {
+    .advice-faq-section {
+        padding: 20px 16px 70px;
+    }
+
+    .advice-faq-header {
+        margin-bottom: 35px;
+        text-align: left;
+    }
+
+    .advice-faq-title {
+        font-size: clamp(2rem, 7.5vw, 2.6rem);
+    }
+
+    .advice-faq-category {
+        font-size: 24px;
+        margin-bottom: 14px;
+    }
+
+    .faq-question {
+        font-size: 18px;
+        padding: 18px 0;
+    }
+
+    .faq-answer-inner {
+        font-size: 14px;
+        padding-bottom: 18px;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Contact Page Styles
+   -------------------------------------------------------------------------- */
+.contact-section {
+    padding: 30px 24px 90px;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.contact-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    background: #1c1e24;
+    border-radius: 28px;
+    padding: 48px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.contact-info-col h2 {
+    font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(28px, 3.2vw, 38px);
+    color: #ffffff;
+    margin: 0 0 14px;
+    font-weight: 400;
+}
+
+.contact-info-col p {
+    color: #a4a8b2;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 15px;
+    line-height: 1.65;
+    margin: 0 0 32px;
+}
+
+.contact-methods-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-method-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: #f1f2f5;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 15px;
+}
+
+.contact-method-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(239, 41, 95, 0.15);
+    color: #ef295f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.contact-form-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.contact-form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #cfd2dc;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+}
+
+.contact-form-group input,
+.contact-form-group textarea {
+    width: 100%;
+    background: #141518;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 14px 18px;
+    color: #ffffff;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-form-group input:focus,
+.contact-form-group textarea:focus {
+    border-color: #ef295f;
+    box-shadow: 0 0 0 3px rgba(239, 41, 95, 0.2);
+}
+
+.contact-form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-submit-btn {
+    width: 100%;
+    min-height: 48px;
+    padding: 13px 24px;
+    background: #ef295f;
+    color: #ffffff;
+    border: none;
+    border-radius: 100px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    font-family: var(--font-body, 'Figtree', sans-serif);
+    margin-top: 8px;
+}
+
+.contact-submit-btn:hover {
+    background: #d81b50;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(239, 41, 95, 0.35);
+}
+
+@media (max-width: 860px) {
+    .contact-card-grid {
+        grid-template-columns: 1fr;
+        padding: 28px 20px;
+        gap: 32px;
+    }
+}
