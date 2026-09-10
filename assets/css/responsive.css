@@ -145,6 +145,11 @@
       color: var(--text-muted);
    }
 
+   .nav-shell .nav-links a.active {
+      background: var(--light-pink-bg, #F4DDE4);
+      color: var(--primary-color, #EF295F);
+   }
+
    .nav-links a:hover {
       background: var(--light-pink-bg, #F4DDE4);
       color: var(--primary-color, #EF295F);
@@ -289,6 +294,7 @@
    .process-map {
       display: grid;
       min-height: auto;
+      height: auto;
       grid-template-columns: 1fr;
       gap: 18px;
    }
@@ -580,6 +586,10 @@
    .process-map {
       margin-top: 45px;
       gap: 16px;
+   }
+
+   .process__cta {
+      margin-top: 8px;
    }
 
    .step-card {
